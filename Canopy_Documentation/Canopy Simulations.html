@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://portal.canopysimulations.com/wiki/Suspension -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Canopy Simulations</title>
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Canopy Simulations Portal">
+
+  <!-- use http://www.favicon-generator.org/ or http://realfavicongenerator.net/ to replace files in public/icon-->
+  <!-- end favicon -->
+
+  <!-- base url -->
+  <!--<base href="/">--><base href=".">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="https://portal.canopysimulations.com/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://portal.canopysimulations.com/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://portal.canopysimulations.com/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://portal.canopysimulations.com/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://portal.canopysimulations.com/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://portal.canopysimulations.com/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://portal.canopysimulations.com/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://portal.canopysimulations.com/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://portal.canopysimulations.com/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="https://portal.canopysimulations.com/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://portal.canopysimulations.com/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://portal.canopysimulations.com/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://portal.canopysimulations.com/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="https://portal.canopysimulations.com/manifest.json">
+  <meta name="apple-mobile-web-app-title" content="Canopy Simulations">
+  <meta name="application-name" content="Canopy Simulations">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- LOGO FIDDLE: https://jsfiddle.net/y7zgbhm8/17/ -->
+  <!-- VIEW ONLY: https://jsfiddle.net/y7zgbhm8/[VERSION]/embedded/result/ -->
+  <!-- THEME: https://color.adobe.com/Brazil-color-theme-7402166/ -->
+  <style>
+    /*
+    $border-size: 0.6em;
+    $icon-size: 1.8em;
+    */
+    .logo {
+      display: flex;
+      align-items: center;
+      //font-size: 24px;
+    }
+
+    .logo-text {
+      display: inline-block;
+      color: #222;
+      font-family: 'Lato',sans-serif;
+      font-weight: bold;
+      margin-left: -0.62em; /* -2.2em + ($border-size/2);*/
+      white-space: nowrap;
+    }
+
+    .logo-icon {
+      box-sizing: content-box;
+      margin: 0;
+      display: inline-block;
+      position: relative;
+      border-top: 0.6em solid #8FBF4D;
+      border-left: 0.6em solid #D95929;
+      border-bottom: 0.6em solid #063559;
+      border-right: 0.6em solid transparent;
+    }
+
+    .logo-icon,
+    .logo-icon:after {
+      border-radius: 50%;
+      min-width: 1.8em;
+      width: 1.8em;
+      height: 1.8em;
+    }
+
+    .loader {
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation: load8 1.1s infinite linear;
+      -moz-animation: load8 1.1s infinite linear;
+      -ms-animation: load8 1.1s infinite linear;
+      -animation: load8 1.1s infinite linear;
+    }
+
+    @-moz-keyframes load8 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes load8 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes load8 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    .init-loader {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="./Canopy Simulations_files/font-awesome.min.css">
+  <link rel="stylesheet" href="./Canopy Simulations_files/gridstack.min.css">
+  <link rel="stylesheet" href="./Canopy Simulations_files/katex.min.css" integrity="sha384-wE+lCONuEo/QSfLb4AfrSk7HjWJtc4Xc1OiB2/aDBzHzjnlBP4SX7vjErTcwlA8C" crossorigin="anonymous">
+
+  <script type="text/javascript">
+    var appInsights=window.appInsights||function(config){
+        function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+      }({
+        instrumentationKey:'d700e8f4-a602-463d-904f-25d1b03a7a84'
+      });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+  </script><script src="./Canopy Simulations_files/ai.0.js.download"></script>
+<link rel="stylesheet" href="./Canopy Simulations_files/styles.365d5b4d01960ddfa765.css"><style>.canopy-nav[_ngcontent-c0]   .navbar-light[_ngcontent-c0]   .navbar-brand[_ngcontent-c0], .canopy-nav[_ngcontent-c0]   .navbar-light[_ngcontent-c0]   .navbar-brand[_ngcontent-c0]:focus, .canopy-nav[_ngcontent-c0]   .navbar-light[_ngcontent-c0]   .navbar-brand[_ngcontent-c0]:hover{color:#063559}.canopy-nav[_ngcontent-c0]   .navbar-light[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .nav-link[_ngcontent-c0]{color:#495057}.canopy-nav[_ngcontent-c0]   .navbar-light[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .nav-link[_ngcontent-c0]:focus, .canopy-nav[_ngcontent-c0]   .navbar-light[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .nav-link[_ngcontent-c0]:focus   .fa[_ngcontent-c0], .canopy-nav[_ngcontent-c0]   .navbar-light[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .nav-link[_ngcontent-c0]:hover, .canopy-nav[_ngcontent-c0]   .navbar-light[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .nav-link[_ngcontent-c0]:hover   .fa[_ngcontent-c0]{color:#212529}.canopy-nav[_ngcontent-c0]   .navbar-brand[_ngcontent-c0]{font-size:12px}.canopy-nav[_ngcontent-c0]   .loader-container[_ngcontent-c0]{font-size:.3rem}.canopy-nav[_ngcontent-c0]   .navbar[_ngcontent-c0]{background-color:#fff;padding-left:0;padding-right:0;border-bottom:1px solid #e9ecef}.canopy-nav[_ngcontent-c0]   .navbar-brand[_ngcontent-c0], .canopy-nav[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .nav-item[_ngcontent-c0]{float:none}.canopy-nav[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .fa[_ngcontent-c0]{margin-right:.33rem;color:#6c757d}.canopy-nav[_ngcontent-c0]   .navbar-divider[_ngcontent-c0], .canopy-nav[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .nav-item[_ngcontent-c0] + .nav-item[_ngcontent-c0]{margin-left:0}@media (min-width:576px){.canopy-nav[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .loader-container[_ngcontent-c0]{margin:8px 16px}.canopy-nav[_ngcontent-c0]   .navbar-divider[_ngcontent-c0], .canopy-nav[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .nav-item[_ngcontent-c0] + .nav-item[_ngcontent-c0]{margin-left:1.5rem}.canopy-nav[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .nav-link[_ngcontent-c0]{padding-left:0;padding-right:0}.canopy-nav[_ngcontent-c0]   .navbar-right[_ngcontent-c0]{font-size:.95rem;margin:4px 0}}@media (min-width:768px){.canopy-nav[_ngcontent-c0]   .navbar-brand[_ngcontent-c0]{font-size:16px}.canopy-nav[_ngcontent-c0]   .navbar-right[_ngcontent-c0]{font-size:1rem;margin:9px 0}.canopy-nav[_ngcontent-c0]   .navbar-nav[_ngcontent-c0]   .loader-container[_ngcontent-c0]{font-size:.5rem}}</style><style>#update-checker[_ngcontent-c1]{text-align:center}#update-checker[_ngcontent-c1]   .update-message[_ngcontent-c1]{position:fixed;top:0;left:0;right:0;z-index:100;border-top:1px solid #b8860b;border-bottom:1px solid #b8860b;background-color:#ff0;padding:.2rem;margin-bottom:1rem;font-size:.9rem}#update-checker[_ngcontent-c1]   .update-message[_ngcontent-c1]   a[_ngcontent-c1]{text-transform:uppercase;font-weight:700;margin-left:.5rem}#update-checker[_ngcontent-c1]   .update-error-message[_ngcontent-c1]{display:none}</style><style>#sim-version-status[_ngcontent-c2]{position:relative;margin-top:.5rem;margin-bottom:.5rem}#sim-version-status[_ngcontent-c2]   .right-container[_ngcontent-c2]{display:flex;justify-content:flex-end;flex-wrap:nowrap;font-size:.8rem}#sim-version-status[_ngcontent-c2]   .right-container[_ngcontent-c2]   .version-item[_ngcontent-c2]{cursor:pointer}#sim-version-status[_ngcontent-c2]   .right-container[_ngcontent-c2]   .version-item[_ngcontent-c2]   .version-item-left[_ngcontent-c2]{display:inline-block;margin-left:.9375rem;border:1px solid #aaa;border-top-left-radius:3px;border-bottom-left-radius:3px;padding:.15rem .5rem;background:#f5f5f5}#sim-version-status[_ngcontent-c2]   .right-container[_ngcontent-c2]   .version-item[_ngcontent-c2]   .version-item-right[_ngcontent-c2]{display:inline-block;border:1px solid #aaa;border-top-right-radius:3px;border-bottom-right-radius:3px;border-left:0;padding:.15rem .5rem;color:gray}#sim-version-status[_ngcontent-c2]   .right-container[_ngcontent-c2]   .version-item.active-version[_ngcontent-c2]   .version-item-right[_ngcontent-c2]{font-weight:700;color:#095189}#sim-version-status[_ngcontent-c2]   .right-container[_ngcontent-c2]   .updating-sim-version-message[_ngcontent-c2]{position:absolute;font-size:.8rem}</style><style>#study-staging-area[_ngcontent-c3]{background:#f5f5f5;margin-top:0;max-height:0;transition:max-height 1s linear}#study-staging-area.area-visible[_ngcontent-c3]{max-height:500px;margin-top:1.875rem}#study-staging-area[_ngcontent-c3]   .study-container-top-line[_ngcontent-c3]{border-top:1px solid rgba(0,0,0,.125)}#study-staging-area[_ngcontent-c3]   .study-container-top[_ngcontent-c3]{padding-top:.75rem;padding-bottom:.75rem}#study-staging-area[_ngcontent-c3]   .study-container-bottom[_ngcontent-c3]{border-top:1px solid rgba(0,0,0,.125);border-bottom:1px solid rgba(0,0,0,.125);padding-bottom:.75rem;background-color:#fff;text-align:center}#study-staging-area[_ngcontent-c3]   .study-container-bottom[_ngcontent-c3]   .study-container-bottom-inner[_ngcontent-c3]{max-width:950px;margin-left:auto;margin-right:auto;text-align:left}@media (min-width:992px){#study-staging-area[_ngcontent-c3]   .study-container-bottom[_ngcontent-c3]   .study-container-bottom-inner[_ngcontent-c3]{max-width:inherit;min-width:950px;display:inline-block}}#study-staging-area[_ngcontent-c3]   .study-container-bottom[_ngcontent-c3]   .study-container-bottom-message[_ngcontent-c3]{text-align:left}#study-staging-area[_ngcontent-c3]   h1[_ngcontent-c3]{display:inline-block;text-align:left;font-size:1.25rem;margin:0 .5rem 0 0}#study-staging-area[_ngcontent-c3]   h1[_ngcontent-c3]   a[_ngcontent-c3]{color:#000;text-decoration:none}#study-staging-area[_ngcontent-c3]   .header-row[_ngcontent-c3]   select[_ngcontent-c3]{height:1.75rem;background:#fff}#study-staging-area[_ngcontent-c3]   .header-row[_ngcontent-c3]   .study-type-select[_ngcontent-c3]{padding-top:.1rem;padding-bottom:.1rem;display:inline-block}#study-staging-area[_ngcontent-c3]   .header-row[_ngcontent-c3]   .study-name-area[_ngcontent-c3]{margin-top:1rem}#study-staging-area[_ngcontent-c3]   .button-area[_ngcontent-c3]{margin:1rem 0 0}@media (min-width:768px){#study-staging-area[_ngcontent-c3]   .header-row[_ngcontent-c3] > div[_ngcontent-c3]{display:flex;align-items:center}#study-staging-area[_ngcontent-c3]   .header-row[_ngcontent-c3]   .study-type-select[_ngcontent-c3]{width:200px}#study-staging-area[_ngcontent-c3]   .header-row[_ngcontent-c3]   .study-name-area[_ngcontent-c3]{margin-top:0;margin-left:.5rem;margin-right:.5rem}#study-staging-area[_ngcontent-c3]   .header-row[_ngcontent-c3]   .study-name-area[_ngcontent-c3]   input[_ngcontent-c3]{display:inline-block;width:250px;height:1.75rem}#study-staging-area[_ngcontent-c3]   .button-area[_ngcontent-c3]{margin:0}}@media (min-width:576px){#study-staging-area[_ngcontent-c3]   .button-area[_ngcontent-c3]   .btn[_ngcontent-c3]{padding:.09375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;margin-top:0}}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .list-link[_ngcontent-c3]{color:#000;text-decoration:none;padding:0;margin:0}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .config-type-icon[_ngcontent-c3]{margin-right:.2rem}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .edited-icon[_ngcontent-c3]{margin-left:.2rem;color:red}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input-container[_ngcontent-c3]{display:inline-block}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input[_ngcontent-c3]{background:#fff;display:inline-block;margin:.75rem .9375rem 0}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input.hidden-study-input[_ngcontent-c3]{display:none}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input.updated[_ngcontent-c3]{display:inline-block}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input[_ngcontent-c3]   .button-menu-hovering-area[_ngcontent-c3]{top:2rem;left:0}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input[_ngcontent-c3]   .study-input-left[_ngcontent-c3]{background:#f5f5f5;display:inline-block;padding:.2rem .75rem;margin:0;border:1px solid #aaa;border-top-left-radius:4px;border-bottom-left-radius:4px}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input[_ngcontent-c3]   .study-input-center[_ngcontent-c3]{display:inline-block;padding:.2rem .75rem;margin:0;border:1px solid #aaa;border-left-width:0}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input[_ngcontent-c3]   .study-input-right[_ngcontent-c3]{display:inline-block;padding:.2rem .75rem;margin:0;border:1px solid #aaa;border-left-width:0;border-top-right-radius:4px;border-bottom-right-radius:4px}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input.optional-study-input[_ngcontent-c3]   .study-input-center[_ngcontent-c3], #study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input.optional-study-input[_ngcontent-c3]   .study-input-left[_ngcontent-c3], #study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input.optional-study-input[_ngcontent-c3]   .study-input-right[_ngcontent-c3]{border-style:dashed;border-color:#ccc}@-webkit-keyframes updated{from{color:transparent}to{color:#0c6eb9}}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input[_ngcontent-c3]   .study-input-content[_ngcontent-c3]   .updated[_ngcontent-c3]{color:#0c6eb9;-webkit-animation-name:updated;-webkit-animation-duration:.75s;-webkit-animation-iteration-count:1}#study-staging-area[_ngcontent-c3]   .study-inputs[_ngcontent-c3]   .study-input[_ngcontent-c3]   .study-input-close[_ngcontent-c3]{cursor:pointer}#study-staging-area[_ngcontent-c3]   .alert[_ngcontent-c3]{margin-top:.5rem;margin-bottom:0}#study-staging-area[_ngcontent-c3]   .error-message-component[_ngcontent-c3]{display:block;margin-top:1rem}#study-staging-area[_ngcontent-c3]   .committed-study[_ngcontent-c3]{margin-top:0;max-height:0;overflow:hidden;opacity:0;border-width:0;margin-bottom:0;padding:0 .9375rem;transition:.3s linear}#study-staging-area[_ngcontent-c3]   .committed-study.show-committed-study[_ngcontent-c3]{margin-top:1rem;max-height:130px;padding:.25rem .9375rem;opacity:1;border-width:1px}#study-staging-area[_ngcontent-c3]   .committed-study[_ngcontent-c3]   .item[_ngcontent-c3]{text-align:center}@media (min-width:576px){#study-staging-area[_ngcontent-c3]   .committed-study[_ngcontent-c3]   .item[_ngcontent-c3]{text-align:left;display:inline;margin-left:1rem}#study-staging-area[_ngcontent-c3]   .committed-study[_ngcontent-c3]   .item[_ngcontent-c3]:first-child{margin-left:0}}#study-staging-area[_ngcontent-c3]   .committed-study[_ngcontent-c3]   .worksheet-item[_ngcontent-c3]{margin-top:.25rem}#study-staging-area[_ngcontent-c3]   .committed-study[_ngcontent-c3]   a[_ngcontent-c3]{cursor:pointer}</style><style>#results-staging-area[_ngcontent-c4]{background:#f5f5f5;margin-top:0;max-height:0;overflow:hidden;transition:max-height 1s linear}#results-staging-area.area-visible[_ngcontent-c4]{max-height:500px;margin-top:1.875rem}#results-staging-area[_ngcontent-c4]   .results-container-top-line[_ngcontent-c4]{border-top:1px solid rgba(0,0,0,.125)}#results-staging-area[_ngcontent-c4]   .results-container-top[_ngcontent-c4]{padding-top:.75rem;padding-bottom:.75rem}#results-staging-area[_ngcontent-c4]   .results-container-bottom[_ngcontent-c4]{border-top:1px solid rgba(0,0,0,.125);border-bottom:1px solid rgba(0,0,0,.125);padding-bottom:.75rem;background-color:#fff;text-align:center}#results-staging-area[_ngcontent-c4]   .results-container-bottom[_ngcontent-c4]   .results-container-bottom-inner[_ngcontent-c4]{max-width:950px;margin-left:auto;margin-right:auto;text-align:left}@media (min-width:992px){#results-staging-area[_ngcontent-c4]   .results-container-bottom[_ngcontent-c4]   .results-container-bottom-inner[_ngcontent-c4]{max-width:inherit;min-width:950px;display:inline-block}}#results-staging-area[_ngcontent-c4]   h1[_ngcontent-c4]{display:inline-block;text-align:left;font-size:1.25rem;margin:0 .5rem 0 0}#results-staging-area[_ngcontent-c4]   .button-area[_ngcontent-c4]{margin:1rem 0 0}@media (min-width:768px){#results-staging-area[_ngcontent-c4]   .header-row[_ngcontent-c4] > div[_ngcontent-c4]{display:flex;align-items:center}#results-staging-area[_ngcontent-c4]   .button-area[_ngcontent-c4]{margin:0}}@media (min-width:576px){#results-staging-area[_ngcontent-c4]   .button-area[_ngcontent-c4]   .btn[_ngcontent-c4]{padding:.09375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;margin-top:0}}#results-staging-area[_ngcontent-c4]   .result-sources[_ngcontent-c4]   .result-source[_ngcontent-c4]{background:#fff;display:inline-block;margin:.75rem .9375rem 0}#results-staging-area[_ngcontent-c4]   .result-sources[_ngcontent-c4]   .result-source[_ngcontent-c4]   a[_ngcontent-c4]{color:#000;text-decoration:none}#results-staging-area[_ngcontent-c4]   .result-sources[_ngcontent-c4]   .result-source[_ngcontent-c4]   .result-source-left[_ngcontent-c4]{background:#f5f5f5;display:inline-block;padding:.2rem .75rem;margin:0;border:1px solid #ccc;border-top-left-radius:4px;border-bottom-left-radius:4px}#results-staging-area[_ngcontent-c4]   .result-sources[_ngcontent-c4]   .result-source[_ngcontent-c4]   .result-source-center[_ngcontent-c4]{display:inline-block;padding:.2rem .75rem;margin:0;border:1px solid #ccc;border-left-width:0}#results-staging-area[_ngcontent-c4]   .result-sources[_ngcontent-c4]   .result-source[_ngcontent-c4]   .move-source[_ngcontent-c4]{cursor:pointer;padding:.2rem .25rem}#results-staging-area[_ngcontent-c4]   .result-sources[_ngcontent-c4]   .result-source[_ngcontent-c4]   .move-source.move-source-left[_ngcontent-c4]{padding-right:.3rem}#results-staging-area[_ngcontent-c4]   .result-sources[_ngcontent-c4]   .result-source[_ngcontent-c4]   .move-source.move-source-right[_ngcontent-c4]{padding-left:.3rem}#results-staging-area[_ngcontent-c4]   .result-sources[_ngcontent-c4]   .result-source[_ngcontent-c4]   .result-source-right[_ngcontent-c4]{display:inline-block;padding:.2rem .5rem;margin:0;border:1px solid #ccc;border-left-width:0;border-top-right-radius:4px;border-bottom-right-radius:4px;cursor:pointer}#results-staging-area[_ngcontent-c4]   .alert[_ngcontent-c4]{margin-top:.5rem;margin-bottom:0}</style><style>.canopy-footer[_ngcontent-c5]{margin-bottom:30rem;text-align:center;padding-top:.9375rem}.canopy-footer[_ngcontent-c5]   hr[_ngcontent-c5]{margin-bottom:2rem;border-color:#f5f5f5}.canopy-footer[_ngcontent-c5]   p[_ngcontent-c5]{font-size:.75rem;color:#ccc}.canopy-footer[_ngcontent-c5]   a[_ngcontent-c5]{color:#ccc;text-decoration:underline}.canopy-footer[_ngcontent-c5]   .footer-item[_ngcontent-c5]{margin-right:1rem;margin-left:1rem}</style><style>.worksheet-dock[_ngcontent-c6]{position:fixed;bottom:0;left:0;right:0;padding-top:1rem;border-top:3px dashed #adb5bd;background-color:#fff;height:30rem;max-height:85%;overflow:auto}</style><style></style><style>#list-versions-dialog[_ngcontent-c8]   .absolute-timestamp[_ngcontent-c8]{display:block;color:#d3d3d3}#list-versions-dialog[_ngcontent-c8]   .compare-target-info[_ngcontent-c8] > div[_ngcontent-c8]{position:relative}#list-versions-dialog[_ngcontent-c8]   .compare-target-info[_ngcontent-c8]   .reset-compare-target[_ngcontent-c8]{position:absolute;right:-.4rem;top:-.5rem}</style><style>#chart-editor-dialog[_ngcontent-c10]   .modal-dialog[_ngcontent-c10]{width:inherit;margin:0 auto;position:absolute;left:10px;right:10px;top:10px;bottom:10px;max-width:950px}#chart-editor-dialog[_ngcontent-c10]   .modal-dialog[_ngcontent-c10]   .modal-content[_ngcontent-c10]{position:relative;height:100%}#chart-editor-dialog[_ngcontent-c10]   .modal-dialog[_ngcontent-c10]   .modal-header[_ngcontent-c10]{position:absolute;top:0;left:0;right:0;height:56px}#chart-editor-dialog[_ngcontent-c10]   .modal-dialog[_ngcontent-c10]   .modal-body[_ngcontent-c10]{position:absolute;top:56px;bottom:60px;left:0;right:0}@media (min-width:576px){#chart-editor-dialog[_ngcontent-c10]   .modal-dialog[_ngcontent-c10]   .modal-header[_ngcontent-c10]{height:60px}#chart-editor-dialog[_ngcontent-c10]   .modal-dialog[_ngcontent-c10]   .modal-body[_ngcontent-c10]{top:60px;bottom:66px}}#chart-editor-dialog[_ngcontent-c10]   .modal-dialog[_ngcontent-c10]   .modal-footer[_ngcontent-c10]{position:absolute;left:0;right:0;bottom:0;height:60px}#chart-editor-dialog[_ngcontent-c10]   .scroll-area[_ngcontent-c10]{top:0;bottom:0;left:0;right:0;position:absolute;overflow-y:scroll;background-color:#fff;padding:.9375rem}#chart-editor-dialog[_ngcontent-c10]   .no-button[_ngcontent-c10]{opacity:.5}#chart-editor-dialog[_ngcontent-c10]   .button-container-left[_ngcontent-c10]{float:left;margin-right:.75rem}#chart-editor-dialog[_ngcontent-c10]   .button-container-right[_ngcontent-c10]{float:right;margin-left:.75rem}#chart-editor-dialog[_ngcontent-c10]   .pane-container[_ngcontent-c10]   .pane-title[_ngcontent-c10]{font-size:1.2rem;font-weight:700;margin:0;line-height:2.3rem}#chart-editor-dialog[_ngcontent-c10]   .pane-container[_ngcontent-c10]   .pane-add-button[_ngcontent-c10]{margin-bottom:1rem;margin-left:1rem;margin-right:1rem;border:1px solid #fff}#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]{margin:.5rem 0}#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]:first-child{margin-top:0}#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]   .channel-content[_ngcontent-c10]{float:left;width:100%;margin-top:.5rem}@media (min-width:576px){#chart-editor-dialog[_ngcontent-c10]   .modal-dialog[_ngcontent-c10]   .modal-footer[_ngcontent-c10]{height:66px}#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]   .channel-content[_ngcontent-c10]{width:60%;margin-top:0}}@media (min-width:768px){#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]   .channel-content[_ngcontent-c10]{width:70%}}@media (min-width:992px){#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]   .channel-content[_ngcontent-c10]{width:80%}}#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]   .channel-content[_ngcontent-c10]   .channel-title[_ngcontent-c10]{font-size:1.1rem;font-weight:700;margin:0}#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]   .channel-content[_ngcontent-c10]   .channel-title[_ngcontent-c10]   small[_ngcontent-c10]{color:#888;margin-left:.5rem}#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]   .channel-content[_ngcontent-c10]   .channel-title[_ngcontent-c10]   .change-units-button[_ngcontent-c10]{margin-left:.5rem;height:1.5rem;padding-top:0;padding-bottom:0;font-size:.9rem}#chart-editor-dialog[_ngcontent-c10]   .channel-container[_ngcontent-c10]   .channel-content[_ngcontent-c10]   .channel-description[_ngcontent-c10]{font-size:.8rem;color:#888;margin-top:.2rem}#chart-editor-dialog[_ngcontent-c10]   .flattened-pane-container[_ngcontent-c10]{margin-bottom:1rem}#chart-editor-dialog[_ngcontent-c10]   .flattened-pane-container[_ngcontent-c10]   .add-channel-button[_ngcontent-c10]{margin-top:.25rem}</style><style>#channel-editor-dialog[_ngcontent-c11]   .modal-dialog[_ngcontent-c11]{width:inherit;margin:0 auto;position:absolute;left:10px;right:10px;top:10px;bottom:10px;max-width:950px}#channel-editor-dialog[_ngcontent-c11]   .modal-dialog[_ngcontent-c11]   .modal-content[_ngcontent-c11]{position:relative;height:100%}#channel-editor-dialog[_ngcontent-c11]   .modal-dialog[_ngcontent-c11]   .modal-header[_ngcontent-c11]{position:absolute;top:0;left:0;right:0;height:56px}#channel-editor-dialog[_ngcontent-c11]   .modal-dialog[_ngcontent-c11]   .modal-body[_ngcontent-c11]{position:absolute;top:56px;bottom:60px;left:0;right:0}@media (min-width:576px){#channel-editor-dialog[_ngcontent-c11]   .modal-dialog[_ngcontent-c11]   .modal-header[_ngcontent-c11]{height:60px}#channel-editor-dialog[_ngcontent-c11]   .modal-dialog[_ngcontent-c11]   .modal-body[_ngcontent-c11]{top:60px;bottom:66px}}#channel-editor-dialog[_ngcontent-c11]   .modal-dialog[_ngcontent-c11]   .modal-footer[_ngcontent-c11]{position:absolute;left:0;right:0;bottom:0;height:60px}#channel-editor-dialog[_ngcontent-c11]   .channel-selection-area[_ngcontent-c11]{top:0;bottom:0;left:0;right:0;position:absolute;background-color:#fff}#channel-editor-dialog[_ngcontent-c11]   .scroll-area[_ngcontent-c11]{overflow-y:scroll;background-color:#fff;padding:.9375rem;top:0;bottom:0;left:0;right:0;position:absolute}#channel-editor-dialog[_ngcontent-c11]   .channel-selection-scroll-area[_ngcontent-c11]{top:4rem}#channel-editor-dialog[_ngcontent-c11]   .channel-selection-filter-area[_ngcontent-c11]{padding:.9375rem}#channel-editor-dialog[_ngcontent-c11]   .no-button[_ngcontent-c11]{opacity:.5}#channel-editor-dialog[_ngcontent-c11]   .button-container-left[_ngcontent-c11]{float:left;margin-right:.75rem}#channel-editor-dialog[_ngcontent-c11]   .button-container-right[_ngcontent-c11]{float:right;margin-left:.75rem}#channel-editor-dialog[_ngcontent-c11]   .pane-container[_ngcontent-c11]   .pane-title[_ngcontent-c11]{font-size:1.2rem;font-weight:700;margin:0;line-height:2.3rem}#channel-editor-dialog[_ngcontent-c11]   .pane-container[_ngcontent-c11]   .pane-add-button[_ngcontent-c11]{margin-bottom:1rem;margin-left:1rem;margin-right:1rem;border:1px solid #fff}#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]{margin:.5rem 0}#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]:first-child{margin-top:0}#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]   .channel-content[_ngcontent-c11]{float:left;width:100%;margin-top:.5rem}@media (min-width:576px){#channel-editor-dialog[_ngcontent-c11]   .modal-dialog[_ngcontent-c11]   .modal-footer[_ngcontent-c11]{height:66px}#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]   .channel-content[_ngcontent-c11]{width:60%;margin-top:0}}@media (min-width:768px){#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]   .channel-content[_ngcontent-c11]{width:70%}}@media (min-width:992px){#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]   .channel-content[_ngcontent-c11]{width:80%}}#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]   .channel-content[_ngcontent-c11]   .channel-title[_ngcontent-c11]{font-size:1.1rem;font-weight:700;margin:0 .5rem 0 0;display:inline-block}#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]   .channel-content[_ngcontent-c11]   .channel-title[_ngcontent-c11]   small[_ngcontent-c11]{color:#888;margin-left:.5rem}#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]   .channel-content[_ngcontent-c11]   .channel-title[_ngcontent-c11]   .change-units-button[_ngcontent-c11]{margin-left:.5rem;height:1.5rem;padding-top:0;padding-bottom:0;font-size:.9rem}#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]   .channel-content[_ngcontent-c11]   .channel-title-and-options[_ngcontent-c11]   label[_ngcontent-c11]{margin-bottom:0}#channel-editor-dialog[_ngcontent-c11]   .channel-container[_ngcontent-c11]   .channel-content[_ngcontent-c11]   .channel-description[_ngcontent-c11]{font-size:.8rem;color:#888;margin-top:.2rem}#channel-editor-dialog[_ngcontent-c11]   .flattened-pane-container[_ngcontent-c11]{margin-bottom:1rem}#channel-editor-dialog[_ngcontent-c11]   .flattened-pane-container[_ngcontent-c11]   .add-channel-button[_ngcontent-c11]{margin-top:.25rem}#channel-editor-dialog[_ngcontent-c11]   .help-text[_ngcontent-c11]{font-size:.75rem;position:absolute;top:1rem;right:1.25rem;color:#adb5bd}</style><style>#config-loader-dialog[_ngcontent-c12]   .modal-dialog[_ngcontent-c12]{width:inherit;margin:0 auto;position:absolute;left:10px;right:10px;top:10px;bottom:10px;max-width:950px}#config-loader-dialog[_ngcontent-c12]   .modal-dialog[_ngcontent-c12]   .modal-content[_ngcontent-c12]{position:relative;height:100%}#config-loader-dialog[_ngcontent-c12]   .modal-dialog[_ngcontent-c12]   .modal-header[_ngcontent-c12]{position:absolute;top:0;left:0;right:0;height:56px}#config-loader-dialog[_ngcontent-c12]   .modal-dialog[_ngcontent-c12]   .modal-header[_ngcontent-c12]   .modal-title[_ngcontent-c12]   small[_ngcontent-c12]{color:grey;margin-left:.5rem}#config-loader-dialog[_ngcontent-c12]   .modal-dialog[_ngcontent-c12]   .modal-body[_ngcontent-c12]{position:absolute;top:56px;bottom:60px;left:0;right:0}@media (min-width:576px){#config-loader-dialog[_ngcontent-c12]   .modal-dialog[_ngcontent-c12]   .modal-header[_ngcontent-c12]{height:60px}#config-loader-dialog[_ngcontent-c12]   .modal-dialog[_ngcontent-c12]   .modal-body[_ngcontent-c12]{top:60px;bottom:66px}}#config-loader-dialog[_ngcontent-c12]   .modal-dialog[_ngcontent-c12]   .modal-footer[_ngcontent-c12]{position:absolute;left:0;right:0;bottom:0;height:60px}@media (min-width:576px){#config-loader-dialog[_ngcontent-c12]   .modal-dialog[_ngcontent-c12]   .modal-footer[_ngcontent-c12]{height:66px}}#config-loader-dialog[_ngcontent-c12]   .scroll-area[_ngcontent-c12]{top:0;bottom:0;left:0;right:0;position:absolute;overflow-y:scroll;background-color:#fff;padding:.9375rem}#config-loader-dialog[_ngcontent-c12]   .view-configs-component[_ngcontent-c12]{display:block;margin-bottom:.9375rem}</style><style>#study-loader-dialog[_ngcontent-c13]   .view-studies-component[_ngcontent-c13]{display:block;margin-bottom:.9375rem}</style><style>#select-sim-version-dialog[_ngcontent-c17]   .modal-dialog[_ngcontent-c17]{width:inherit;margin:0 auto;position:absolute;left:10px;right:10px;top:10px;bottom:10px;max-width:950px}</style><style>#support-session-dialog[_ngcontent-c19]   .view-configs-component[_ngcontent-c19]{margin-bottom:.9375rem}#support-session-dialog[_ngcontent-c19]   .session-status-container[_ngcontent-c19]   .alert[_ngcontent-c19]{text-align:center}#support-session-dialog[_ngcontent-c19]   .support-message-input[_ngcontent-c19]{min-height:16rem;font-family:Menlo,Monaco,Consolas,"Courier New",monospace}#support-session-dialog[_ngcontent-c19]   .session-container[_ngcontent-c19]{margin-top:2rem}#support-session-dialog[_ngcontent-c19]   .session-container[_ngcontent-c19]   .username[_ngcontent-c19]{font-weight:700;margin-right:2rem;font-size:.9rem}#support-session-dialog[_ngcontent-c19]   .session-container[_ngcontent-c19]   .tenant-name[_ngcontent-c19]{margin-right:2rem;color:#888;font-size:.9rem}#support-session-dialog[_ngcontent-c19]   .session-container[_ngcontent-c19]   .response-date[_ngcontent-c19]{position:absolute;right:0;margin-right:.9375rem;color:#888;font-size:.9rem}#support-session-dialog[_ngcontent-c19]   .session-container[_ngcontent-c19]   .response-title[_ngcontent-c19]{margin-top:1rem;margin-bottom:.25rem}#support-session-dialog[_ngcontent-c19]   .session-container[_ngcontent-c19]   .response-message[_ngcontent-c19]{margin-bottom:0;white-space:pre-wrap;font-family:Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.8rem}</style><style>#set-channel-units-dialog[_ngcontent-c20]   .units-options[_ngcontent-c20]   button[_ngcontent-c20]{margin-right:.25rem}</style><style>#loading-dialog[_ngcontent-c21]   .modal-body[_ngcontent-c21]{text-align:center}</style><style>.context-menu-container[_ngcontent-c22]{position:absolute;z-index:2000}</style><style>.loader-container{font-size:.5em}.loader-centered{text-align:center}.loader-content{font-size:2.2em;margin-left:.5em;vertical-align:top}.loader-content:empty{display:none}</style><style>.view-studies-component[_ngcontent-c35]   .failure-job-count[_ngcontent-c35]{color:#d95929}.view-studies-component[_ngcontent-c35]   .failure-job-count[_ngcontent-c35]   a[_ngcontent-c35]{color:#d95929;text-decoration:none}.view-studies-component[_ngcontent-c35]   .success-job-count[_ngcontent-c35]{color:#8fbf4d}.view-studies-component[_ngcontent-c35]   .success-job-count[_ngcontent-c35]   a[_ngcontent-c35]{color:#8fbf4d;text-decoration:none}.view-studies-component[_ngcontent-c35]   .progress[_ngcontent-c35]{width:80px;height:1rem;margin:.2rem 0 0}.view-studies-component[_ngcontent-c35]   .progress-icon[_ngcontent-c35]{position:absolute;font-size:.75rem;margin-left:.2rem;color:#fff}.view-studies-component[_ngcontent-c35]   td[_ngcontent-c35]{white-space:nowrap;max-width:150px;overflow:hidden}@media (min-width:768px){.view-studies-component[_ngcontent-c35]   td[_ngcontent-c35]{max-width:200px}}.view-studies-component[_ngcontent-c35]   td.icon-cell[_ngcontent-c35]{overflow:visible}.view-studies-component[_ngcontent-c35]   td[_ngcontent-c35]   .select-study-link[_ngcontent-c35]{white-space:normal}.view-studies-component[_ngcontent-c35]   td[_ngcontent-c35]   .config-study-additional-information[_ngcontent-c35]{text-transform:uppercase;font-size:.6rem;margin-top:.5rem;color:#d95929}.view-studies-component[_ngcontent-c35]   td[_ngcontent-c35]   .config-study-additional-information[_ngcontent-c35]   a[_ngcontent-c35], .view-studies-component[_ngcontent-c35]   td[_ngcontent-c35]   .config-study-additional-information[_ngcontent-c35]   a[_ngcontent-c35]:active, .view-studies-component[_ngcontent-c35]   td[_ngcontent-c35]   .config-study-additional-information[_ngcontent-c35]   a[_ngcontent-c35]:focus, .view-studies-component[_ngcontent-c35]   td[_ngcontent-c35]   .config-study-additional-information[_ngcontent-c35]   a[_ngcontent-c35]:hover{color:#d95929}.view-studies-component[_ngcontent-c35]   .job-count-column[_ngcontent-c35]{overflow:visible}.view-studies-component[_ngcontent-c35]   .created-column[_ngcontent-c35]{max-width:140px}</style><style>.list-filter{border:1px solid rgba(0,0,0,.125);background-color:#f5f5f5;border-top-left-radius:.25rem;border-top-right-radius:.25rem;border-bottom-width:0;padding:.5rem 1rem}.list-filter .form-group .filter-progress{display:inline-block}.list-filter .form-group .filter-progress .loader-container{top:.25rem;position:absolute;font-size:.6rem}.list-filter .active-filter-property{color:#0c6eb9}.list-filter .form-group{display:block;margin-bottom:0}.list-filter .form-group button .fa{margin:0}.list-filter .right-side{text-align:right}.list-filter .sort-buttons button{margin-top:.5rem;margin-right:.25rem}.list-filter .sort-buttons button .fa{margin:0 0 0 .25rem}.list-filter .current-sort-mode{display:inline;margin-left:.2rem;font-size:.8rem;color:gray}.list-filter .group-buttons button{margin-top:.5rem;margin-right:.25rem}.list-filter .group-buttons button,.list-filter .sort-buttons button{border:0;background-color:transparent}.list-filter .group-buttons button:hover,.list-filter .sort-buttons button:hover{background-color:#e6e6e6}.list-filter .filter-buttons{visibility:collapse;display:none}.list-filter .filter-buttons button{margin-top:.5rem;margin-right:.25rem}.list-filter .active-filter-buttons{visibility:visible;display:block}.list-filter .toggle-button{color:#adb5bd}.list-filter .active-toggle-button{color:#1e90ff}.list-filter .item-count{background:#96b2c7;color:#fff;display:inline-block;border-radius:.5rem;height:1rem;min-width:1rem;text-align:center;font-size:.75rem;margin:.2rem 0 .2rem .5rem}.list-filter .view-custom-properties hr{margin-top:.5rem;margin-bottom:0}.list-filter .filter-builder-header{margin-bottom:0}.list-filter .query-builder-row .query-builder-buttons{margin:1rem 0 0}.list-filter .query-builder-row .query-builder-buttons button{margin-top:0}.list-filter .query-builder-row .query-builder-buttons a{margin-left:.5rem}.list-filter .query-builder-load-progress,.list-filter .query-renderer-load-progress{padding-top:.5rem;display:block}.filtered-list{border:1px solid rgba(0,0,0,.125);border-top-width:0;border-bottom-left-radius:.25rem;border-bottom-right-radius:.25rem}</style><style>.quick-config-manager[_ngcontent-c49]   .button-menu-hovering-area[_ngcontent-c49]{top:2.5rem;left:-.4rem;padding:1rem;width:400px;background-color:#fff}.quick-config-manager[_ngcontent-c49]   .fa-pencil[_ngcontent-c49]{position:absolute;left:1.5rem;top:.4rem;color:#f55}.quick-config-manager[_ngcontent-c49]   .hover-area-tab[_ngcontent-c49]{position:absolute;padding:.75rem;width:4rem;height:3rem;text-align:center;top:-3rem;left:-1px;background-color:#fff;border:1px solid #d3d3d3;border-bottom:0;border-top-left-radius:4px;border-top-right-radius:4px}.quick-config-manager[_ngcontent-c49]   .hover-area-tab[_ngcontent-c49]   .icon-area[_ngcontent-c49]{padding-left:0;padding-top:1px}.quick-config-manager[_ngcontent-c49]   .hover-area-tab[_ngcontent-c49]   .icon-area[_ngcontent-c49]   .fa-pencil[_ngcontent-c49]{left:1.85rem;top:.8rem}.quick-config-manager[_ngcontent-c49]   h3[_ngcontent-c49]{margin-bottom:.75rem}.quick-config-manager[_ngcontent-c49]   .previously-saved-item[_ngcontent-c49]{margin-top:.5rem;margin-bottom:.5rem}.quick-config-manager[_ngcontent-c49]   .no-user-configs-message[_ngcontent-c49]{font-style:italic}</style><style>.filter-query-renderer{margin:.5rem 0;font-family:Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.9rem;background:#fff;border:1px solid #dcdbdb;border-radius:3px;padding:.25rem .5rem;text-align:center}.filter-query-renderer.query-invalid{background:#ffc8c8}.filter-query-renderer.query-not-applied{opacity:.5}.filter-query-renderer .query-operator{color:#6495ed}.filter-query-renderer .query-value{color:#3c763d}.filter-query-renderer .query-condition{white-space:nowrap}</style><style>.view-credits[_ngcontent-c47]{color:gray;font-size:.85em;overflow:visible}.view-credits[_ngcontent-c47]   i[_ngcontent-c47]{margin-right:.25em;margin-left:.25em;opacity:.75}.view-credits[_ngcontent-c47]   .view-compute-credits[_ngcontent-c47], .view-credits[_ngcontent-c47]   .view-storage-credits[_ngcontent-c47]{margin-right:.25em}</style><style>[_nghost-c45]{display:inline-block}.linting-engine-dialog-launcher[_ngcontent-c45]:not(.btn-icon)   .fa[_ngcontent-c45]{margin-right:.25rem}</style><style>#view-study-page[_ngcontent-c51]   .failure-header[_ngcontent-c51]{color:#d95929}#view-study-page[_ngcontent-c51]   .success-header[_ngcontent-c51]{color:#8fbf4d}#view-study-page[_ngcontent-c51]   #study-explorer-chart.scalar-viewer[_ngcontent-c51]{min-height:800px}#view-study-page[_ngcontent-c51]   #parallel-coordinates-chart[_ngcontent-c51]   .col-sm-6[_ngcontent-c51]{padding-left:.2rem;padding-right:.2rem}#view-study-page[_ngcontent-c51]   a.study-sim-version[_ngcontent-c51]{color:gray}#view-study-page[_ngcontent-c51]   .study-notes-content[_ngcontent-c51]{margin:1rem}</style><style>[_nghost-c52]{display:inline-block}.support-session-launcher[_ngcontent-c52]   .fa[_ngcontent-c52]{margin-right:.25rem}.support-session-launcher[_ngcontent-c52]   button[_ngcontent-c52]{min-height:2.7rem}.support-session-launcher[_ngcontent-c52]   .session-exists[_ngcontent-c52]{padding-top:.1rem;padding-bottom:.1rem}.support-session-launcher[_ngcontent-c52]   .support-open[_ngcontent-c52]{background-color:#f2d13e}.support-session-launcher[_ngcontent-c52]   .support-closed[_ngcontent-c52]{background-color:#8fbf4d}.support-session-launcher[_ngcontent-c52]   .status[_ngcontent-c52]{font-size:.9rem;margin-bottom:-.1rem;font-weight:700}.support-session-launcher[_ngcontent-c52]   .last-modified-date[_ngcontent-c52]{font-size:.75rem}</style><style>.view-custom-properties[_ngcontent-c53]   hr[_ngcontent-c53]{margin-top:1rem;margin-bottom:.5rem}.view-custom-properties[_ngcontent-c53]   .custom-property[_ngcontent-c53]{display:inline-block;margin:.5rem .5rem 0 0}.view-custom-properties[_ngcontent-c53]   .name-box[_ngcontent-c53]{display:inline-block;background:#f5f5f5;padding:.1rem .5rem;margin:0;border:1px solid #ccc;border-top-left-radius:4px;border-bottom-left-radius:4px}.view-custom-properties[_ngcontent-c53]   .value-box[_ngcontent-c53]{display:inline-block;background:#fff;padding:.1rem .5rem;margin:0;border:1px solid #ccc;border-left-width:0;border-top-right-radius:4px;border-bottom-right-radius:4px}</style><style>#view-job-page[_ngcontent-c32]   #chart-header[_ngcontent-c32]   .loader-container[_ngcontent-c32]{display:inline-block;margin:0}#view-job-page[_ngcontent-c32]   .chart-help-area[_ngcontent-c32]{margin-bottom:.9375rem}#view-job-page[_ngcontent-c32]   .load-charts-button-area[_ngcontent-c32]{text-align:center;margin:1rem}#view-job-page[_ngcontent-c32]   .job-index[_ngcontent-c32]{margin-left:.5rem}</style><style>td[_ngcontent-c56]{vertical-align:middle}</style><style>.job-results-component[_ngcontent-c57], .job-results-component[_ngcontent-c57]   .job-results-tabs[_ngcontent-c57]{margin-bottom:1rem}.job-results-component[_ngcontent-c57]   .job-results-tabs[_ngcontent-c57]   h2[_ngcontent-c57]{margin-bottom:.25rem;margin-top:1.5rem}.job-results-component[_ngcontent-c57]   .job-results-tabs[_ngcontent-c57]   button[_ngcontent-c57]{margin-right:.5rem;margin-top:.5rem}.job-results-component[_ngcontent-c57]   .job-results-error-message[_ngcontent-c57], .job-results-component[_ngcontent-c57]   .job-results-loader[_ngcontent-c57]{margin-top:1rem}</style><style>.job-selector-container[_ngcontent-c63]{margin-bottom:1rem}.job-selector-container[_ngcontent-c63]   .job-selector[_ngcontent-c63]   h2[_ngcontent-c63]{margin-bottom:.25rem;margin-top:1.5rem}.job-selector-container[_ngcontent-c63]   .job-selector[_ngcontent-c63]   button[_ngcontent-c63]{margin-right:.5rem;margin-top:.5rem}.job-selector-container[_ngcontent-c63]   .job-selector-error-message[_ngcontent-c63], .job-selector-container[_ngcontent-c63]   .job-selector-loader[_ngcontent-c63]{margin-top:1rem}</style><style>.chart-help-area[_ngcontent-c64]{margin-top:1rem}.chart-help-area[_ngcontent-c64]   .help-content[_ngcontent-c64]{overflow:hidden;max-height:0;opacity:0;transition:max-height .5s linear,opacity .5s linear,margin-top .5s linear}.chart-help-area[_ngcontent-c64]   .help-content[_ngcontent-c64]   .card[_ngcontent-c64]{background:#fcfcfc;margin:0}.chart-help-area[_ngcontent-c64]   .help-content.show-help[_ngcontent-c64]{max-height:800px;opacity:1;margin-top:.9375rem}@media (min-width:576px){.chart-help-area[_ngcontent-c64]   .help-content.show-help[_ngcontent-c64]{max-height:600px}}.chart-help-area[_ngcontent-c64]   .help-content[_ngcontent-c64]   ul[_ngcontent-c64]{list-style-type:none;padding-left:.75rem}.chart-help-area[_ngcontent-c64]   .help-content[_ngcontent-c64]   li[_ngcontent-c64]{position:relative;margin:.5rem 0;padding-left:1.75rem}.chart-help-area[_ngcontent-c64]   .help-content[_ngcontent-c64]   li[_ngcontent-c64]:before{font-family:FontAwesome;content:"\f058";position:absolute;top:0;left:0;color:#555}</style><style>.scalar-result-type-header[_ngcontent-c59]{margin-top:2rem}</style><style type="text/css" data-gs-style-id="gridstack-style-39451"></style><style>.view-configs-component.view-worksheet-configs[_ngcontent-c33]   .config-sim-version[_ngcontent-c33]{display:none}.view-configs-component[_ngcontent-c33]   .loader-padding[_ngcontent-c33]{margin-left:.9375rem}.view-configs-component[_ngcontent-c33]   .select-config-link[_ngcontent-c33]{cursor:pointer}.view-configs-component[_ngcontent-c33]   td[_ngcontent-c33]{white-space:nowrap}.view-configs-component[_ngcontent-c33]   td[_ngcontent-c33]   .select-config-link[_ngcontent-c33]{white-space:normal}.view-configs-component[_ngcontent-c33]   td[_ngcontent-c33]   .config-study-additional-information[_ngcontent-c33]{text-transform:uppercase;font-size:.6rem;margin-top:.5rem;color:#d95929}.view-configs-component[_ngcontent-c33]   td[_ngcontent-c33]   .config-study-additional-information[_ngcontent-c33]   a[_ngcontent-c33], .view-configs-component[_ngcontent-c33]   td[_ngcontent-c33]   .config-study-additional-information[_ngcontent-c33]   a[_ngcontent-c33]:active, .view-configs-component[_ngcontent-c33]   td[_ngcontent-c33]   .config-study-additional-information[_ngcontent-c33]   a[_ngcontent-c33]:focus, .view-configs-component[_ngcontent-c33]   td[_ngcontent-c33]   .config-study-additional-information[_ngcontent-c33]   a[_ngcontent-c33]:hover{color:#d95929}.view-configs-component[_ngcontent-c33]   #convert-telemetry-button[_ngcontent-c33]{float:right}</style><style>.view-default-configs-component[_ngcontent-c34]   .select-config-link[_ngcontent-c34]{cursor:pointer}</style><style>.support-session-hover-launcher[_ngcontent-c48]   .support-hover-target[_ngcontent-c48]{position:relative}.support-session-hover-launcher[_ngcontent-c48]   .support-hover-target[_ngcontent-c48]   .fa.support-open[_ngcontent-c48]{background-color:#f2d13e}.support-session-hover-launcher[_ngcontent-c48]   .support-hover-target[_ngcontent-c48]   .fa.support-closed[_ngcontent-c48]{background-color:#8fbf4d}.support-session-hover-launcher[_ngcontent-c48]   .support-hover-target[_ngcontent-c48]   .support-session-launcher-component[_ngcontent-c48]{display:none;position:absolute}.support-session-hover-launcher[_ngcontent-c48]   .support-hover-target[_ngcontent-c48]:hover   .support-session-launcher-component[_ngcontent-c48]{display:inline-block;right:0;top:-.6rem}</style><style>#config-preview-container[_ngcontent-c70]{margin-bottom:1rem}#edit-config-component[_ngcontent-c70]   .title-label[_ngcontent-c70]{font-weight:700}#edit-config-component[_ngcontent-c70]   #dirty-message[_ngcontent-c70]{color:#d95929!important}#edit-config-component[_ngcontent-c70]   #success-message[_ngcontent-c70]{color:#8fbf4d!important}#edit-config-component[_ngcontent-c70]   .unvalidated-input[_ngcontent-c70]{min-height:20rem;font-family:Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.9rem}#edit-config-component[_ngcontent-c70]   .custom-view-selector[_ngcontent-c70]{position:-webkit-sticky;position:sticky;top:0;display:block;z-index:99}</style><style>#edit-config-sticky[_ngcontent-c73]   .sticky[_ngcontent-c73]{z-index:100;position:fixed;bottom:.75rem;right:1.5rem;border:1px solid rgba(0,0,0,.125);background-color:#f5f5f5;padding:.75rem 1rem;border-radius:.25rem .25rem 0 0}#edit-config-sticky[_ngcontent-c73]   .sticky[_ngcontent-c73]   .status-text[_ngcontent-c73]{margin-right:.5rem;vertical-align:middle}#edit-config-sticky[_ngcontent-c73]   .sticky[_ngcontent-c73]   #sticky-dirty-message[_ngcontent-c73]{color:#d95929!important}#edit-config-sticky[_ngcontent-c73]   .sticky[_ngcontent-c73]   #sticky-success-message[_ngcontent-c73]{color:#8fbf4d!important}</style><style>[_nghost-c75]{display:none}.downgraded-config[_nghost-c75]{display:block}</style><style>.view-edit-custom-properties-component[_ngcontent-c76]   .view-custom-properties-container[_ngcontent-c76]{display:block;margin-bottom:1rem}</style><style>.custom-view-filter[_ngcontent-c77]{border:1px solid rgba(0,0,0,.125);background-color:#fff;border-radius:.25rem;padding:.5rem 1rem;margin-bottom:1rem}.custom-view-filter[_ngcontent-c77]   .form-group[_ngcontent-c77]   .quick-config-manager-component[_ngcontent-c77], .custom-view-filter[_ngcontent-c77]   .form-group[_ngcontent-c77] > button[_ngcontent-c77]{margin-right:.5rem}.custom-view-filter[_ngcontent-c77]   .ng2-tag-input[_ngcontent-c77]{border-bottom:none!important}.custom-view-filter[_ngcontent-c77]   .error-messages[_ngcontent-c77]{position:absolute;top:-2rem;right:0}.custom-view-filter[_ngcontent-c77]   .filter-title[_ngcontent-c77]{font-weight:700;margin-right:.5rem}.custom-view-filter[_ngcontent-c77]   .help-text[_ngcontent-c77]{position:absolute;bottom:-10px;right:0;font-size:.75rem;color:#adb5bd}</style><style>.dark[_ngcontent-c79]   tag[_ngcontent-c79]:focus{-webkit-box-shadow:0 0 0 1px #323232;box-shadow:0 0 0 1px #323232}.ng2-tag-input.bootstrap3-info[_ngcontent-c79]{background-color:#fff;display:inline-block;color:#555;vertical-align:middle;max-width:100%;height:42px;line-height:44px}.ng2-tag-input.bootstrap3-info[_ngcontent-c79]   input[_ngcontent-c79]{border:none;-webkit-box-shadow:none;box-shadow:none;outline:0;background-color:transparent;padding:0 6px;margin:0;width:auto;max-width:inherit}.ng2-tag-input.bootstrap3-info[_ngcontent-c79]   .form-control[_ngcontent-c79]   input[_ngcontent-c79]::-moz-placeholder{color:#777;opacity:1}.ng2-tag-input.bootstrap3-info[_ngcontent-c79]   .form-control[_ngcontent-c79]   input[_ngcontent-c79]:-ms-input-placeholder{color:#777}.ng2-tag-input.bootstrap3-info[_ngcontent-c79]   .form-control[_ngcontent-c79]   input[_ngcontent-c79]::-webkit-input-placeholder{color:#777}.ng2-tag-input.bootstrap3-info[_ngcontent-c79]   input[_ngcontent-c79]:focus{border:none;-webkit-box-shadow:none;box-shadow:none}.bootstrap3-info.ng2-tag-input.ng2-tag-input--focused[_ngcontent-c79]{-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.4);box-shadow:inset 0 1px 1px rgba(0,0,0,.4);border:1px solid #ccc}.bootstrap3-info.ng2-tag-input.ng2-tag-input--invalid[_ngcontent-c79]{-webkit-box-shadow:inset 0 1px 1px #d9534f;box-shadow:inset 0 1px 1px #d9534f}.ng2-tag-input[_ngcontent-c79]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;-webkit-transition:all .25s;transition:all .25s;padding:.25rem 0;min-height:32px;cursor:text;border-bottom:2px solid #efefef}.ng2-tag-input[_ngcontent-c79]:focus{outline:0}.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c79]{opacity:.7}.ng2-tag-input.ng2-tag-input--focused[_ngcontent-c79]{border-bottom:2px solid #2196f3}.ng2-tag-input.ng2-tag-input--invalid[_ngcontent-c79]{border-bottom:2px solid #f44336}.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c79]{border:none}.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c79]{opacity:.5;cursor:not-allowed}.ng2-tag-input[_ngcontent-c79]   form[_ngcontent-c79]{margin:.1em 0}.ng2-tag-input[_ngcontent-c79]   .ng2-tags-container[_ngcontent-c79]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.minimal.ng2-tag-input[_ngcontent-c79]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;cursor:text;border-bottom:1px solid transparent}.minimal.ng2-tag-input[_ngcontent-c79]:focus{outline:0}.minimal.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c79]{opacity:.7}.minimal.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c79]{border:none}.minimal.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c79]{opacity:.5;cursor:not-allowed}.minimal.ng2-tag-input[_ngcontent-c79]   .ng2-tags-container[_ngcontent-c79]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.dark.ng2-tag-input[_ngcontent-c79]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;cursor:text;border-bottom:2px solid #444}.dark.ng2-tag-input[_ngcontent-c79]:focus{outline:0}.dark.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c79]{opacity:.7}.dark.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c79]{border:none}.dark.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c79]{opacity:.5;cursor:not-allowed}.dark.ng2-tag-input[_ngcontent-c79]   .ng2-tags-container[_ngcontent-c79]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.bootstrap.ng2-tag-input[_ngcontent-c79]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;cursor:text;border-bottom:2px solid #efefef}.bootstrap.ng2-tag-input[_ngcontent-c79]:focus{outline:0}.bootstrap.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c79]{opacity:.7}.bootstrap.ng2-tag-input.ng2-tag-input--focused[_ngcontent-c79]{border-bottom:2px solid #0275d8}.bootstrap.ng2-tag-input.ng2-tag-input--invalid[_ngcontent-c79]{border-bottom:2px solid #d9534f}.bootstrap.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c79]{border:none}.bootstrap.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c79]{opacity:.5;cursor:not-allowed}.bootstrap.ng2-tag-input[_ngcontent-c79]   .ng2-tags-container[_ngcontent-c79]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.bootstrap3-info.ng2-tag-input[_ngcontent-c79]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;padding:4px;cursor:text;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);border-radius:4px}.bootstrap3-info.ng2-tag-input[_ngcontent-c79]:focus{outline:0}.bootstrap3-info.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c79]{opacity:.7}.bootstrap3-info.ng2-tag-input.ng2-tag-input--invalid[_ngcontent-c79]{border-bottom:1px solid #d9534f}.bootstrap3-info.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c79]{border:none}.bootstrap3-info.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c79]{opacity:.5;cursor:not-allowed}.bootstrap3-info.ng2-tag-input[_ngcontent-c79]   form[_ngcontent-c79]{margin:.1em 0}.bootstrap3-info.ng2-tag-input[_ngcontent-c79]   .ng2-tags-container[_ngcontent-c79]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.error-message[_ngcontent-c79]{font-size:.8em;color:#f44336;margin:.5em 0 0}.bootstrap[_ngcontent-c79]   .error-message[_ngcontent-c79]{color:#d9534f}.progress-bar[_ngcontent-c79], .progress-bar[_ngcontent-c79]:before{height:2px;width:100%;margin:0}.progress-bar[_ngcontent-c79]{background-color:#2196f3;display:-webkit-box;display:-ms-flexbox;display:flex;position:absolute;bottom:0}.progress-bar[_ngcontent-c79]:before{background-color:#82c4f8;content:'';-webkit-animation:2s cubic-bezier(.4,0,.2,1) infinite running-progress;animation:2s cubic-bezier(.4,0,.2,1) infinite running-progress}@-webkit-keyframes running-progress{0%{margin-left:0;margin-right:100%}50%{margin-left:25%;margin-right:0}100%{margin-left:100%;margin-right:0}}@keyframes running-progress{0%{margin-left:0;margin-right:100%}50%{margin-left:25%;margin-right:0}100%{margin-left:100%;margin-right:0}}tag[_ngcontent-c79]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;font-family:Roboto,"Helvetica Neue",sans-serif;font-weight:400;font-size:1em;letter-spacing:.05rem;color:#444;border-radius:16px;-webkit-transition:all .3s;transition:all .3s;margin:.1rem .3rem .1rem 0;padding:.08rem .45rem;height:32px;line-height:34px;background:#efefef;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;overflow:hidden;outline:0;cursor:pointer;position:relative}tag[_ngcontent-c79]:not(.readonly):not(.tag--editing):focus{background:#2196f3;color:#fff;-webkit-box-shadow:0 2px 3px 1px #d4d1d1;box-shadow:0 2px 3px 1px #d4d1d1}tag[_ngcontent-c79]:not(.readonly):not(.tag--editing):active{background:#0d8aee;color:#fff;-webkit-box-shadow:0 2px 3px 1px #d4d1d1;box-shadow:0 2px 3px 1px #d4d1d1}tag[_ngcontent-c79]:not(:focus):not(.tag--editing):not(:active):not(.readonly):hover{background:#e2e2e2;color:initial;-webkit-box-shadow:0 2px 3px 1px #d4d1d1;box-shadow:0 2px 3px 1px #d4d1d1}tag.readonly[_ngcontent-c79]{cursor:default}tag.readonly[_ngcontent-c79]:focus, tag[_ngcontent-c79]:focus{outline:0}tag.tag--editing[_ngcontent-c79]{background-color:#fff;border:1px solid #ccc;cursor:text}.minimal[_ngcontent-c79]   tag[_ngcontent-c79]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;border-radius:0;background:#f9f9f9;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;overflow:hidden;outline:0;cursor:pointer;position:relative}.minimal[_ngcontent-c79]   tag[_ngcontent-c79]:not(.readonly):not(.tag--editing):active, .minimal[_ngcontent-c79]   tag[_ngcontent-c79]:not(.readonly):not(.tag--editing):focus{background:#d0d0d0;color:initial}.minimal[_ngcontent-c79]   tag[_ngcontent-c79]:not(:focus):not(.tag--editing):not(:active):not(.readonly):hover{background:#ececec}.minimal[_ngcontent-c79]   tag.readonly[_ngcontent-c79]{cursor:default}.minimal[_ngcontent-c79]   tag.readonly[_ngcontent-c79]:focus, .minimal[_ngcontent-c79]   tag[_ngcontent-c79]:focus{outline:0}.minimal[_ngcontent-c79]   tag.tag--editing[_ngcontent-c79]{cursor:text}.dark[_ngcontent-c79]   tag[_ngcontent-c79]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;color:#f9f9f9;border-radius:3px;background:#444;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;overflow:hidden;outline:0;cursor:pointer;position:relative}.dark[_ngcontent-c79]   tag[_ngcontent-c79]:not(.readonly):not(.tag--editing):focus{background:#efefef;color:#444}.dark[_ngcontent-c79]   tag[_ngcontent-c79]:not(:focus):not(.tag--editing):not(:active):not(.readonly):hover{background:#2b2b2b;color:#f9f9f9}.dark[_ngcontent-c79]   tag.readonly[_ngcontent-c79]{cursor:default}.dark[_ngcontent-c79]   tag.readonly[_ngcontent-c79]:focus, .dark[_ngcontent-c79]   tag[_ngcontent-c79]:focus{outline:0}.dark[_ngcontent-c79]   tag.tag--editing[_ngcontent-c79]{cursor:text}.bootstrap[_ngcontent-c79]   tag[_ngcontent-c79]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;color:#f9f9f9;border-radius:.25rem;background:#0275d8;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;overflow:hidden;outline:0;cursor:pointer;position:relative}.bootstrap[_ngcontent-c79]   tag[_ngcontent-c79]:not(.readonly):not(.tag--editing):active, .bootstrap[_ngcontent-c79]   tag[_ngcontent-c79]:not(.readonly):not(.tag--editing):focus{background:#025aa5}.bootstrap[_ngcontent-c79]   tag[_ngcontent-c79]:not(:focus):not(.tag--editing):not(:active):not(.readonly):hover{background:#0267bf;color:#f9f9f9}.bootstrap[_ngcontent-c79]   tag.readonly[_ngcontent-c79]{cursor:default}.bootstrap[_ngcontent-c79]   tag.readonly[_ngcontent-c79]:focus, .bootstrap[_ngcontent-c79]   tag[_ngcontent-c79]:focus{outline:0}.bootstrap[_ngcontent-c79]   tag.tag--editing[_ngcontent-c79]{cursor:text}.bootstrap3-info[_ngcontent-c79]   tag[_ngcontent-c79]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;font-family:inherit;font-weight:400;font-size:95%;color:#fff;border-radius:.25em;background:#5bc0de;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;overflow:hidden;outline:0;cursor:pointer;position:relative;padding:.25em .6em;text-align:center;white-space:nowrap}.bootstrap3-info[_ngcontent-c79]   tag[_ngcontent-c79]:not(.readonly):not(.tag--editing):active, .bootstrap3-info[_ngcontent-c79]   tag[_ngcontent-c79]:not(.readonly):not(.tag--editing):focus{background:#28a1c5}.bootstrap3-info[_ngcontent-c79]   tag[_ngcontent-c79]:not(:focus):not(.tag--editing):not(:active):not(.readonly):hover{background:#46b8da;color:#fff}.bootstrap3-info[_ngcontent-c79]   tag.readonly[_ngcontent-c79]{cursor:default}.bootstrap3-info[_ngcontent-c79]   tag.readonly[_ngcontent-c79]:focus, .bootstrap3-info[_ngcontent-c79]   tag[_ngcontent-c79]:focus{outline:0}.bootstrap3-info[_ngcontent-c79]   tag.tag--editing[_ngcontent-c79]{cursor:text}[_nghost-c79]{display:block}</style><style>.dark[_ngcontent-c81]   tag[_ngcontent-c81]:focus{-webkit-box-shadow:0 0 0 1px #323232;box-shadow:0 0 0 1px #323232}.ng2-tag-input.bootstrap3-info[_ngcontent-c81]{background-color:#fff;display:inline-block;color:#555;vertical-align:middle;max-width:100%;height:42px;line-height:44px}.ng2-tag-input.bootstrap3-info[_ngcontent-c81]   input[_ngcontent-c81]{border:none;-webkit-box-shadow:none;box-shadow:none;outline:0;background-color:transparent;padding:0 6px;margin:0;width:auto;max-width:inherit}.ng2-tag-input.bootstrap3-info[_ngcontent-c81]   .form-control[_ngcontent-c81]   input[_ngcontent-c81]::-moz-placeholder{color:#777;opacity:1}.ng2-tag-input.bootstrap3-info[_ngcontent-c81]   .form-control[_ngcontent-c81]   input[_ngcontent-c81]:-ms-input-placeholder{color:#777}.ng2-tag-input.bootstrap3-info[_ngcontent-c81]   .form-control[_ngcontent-c81]   input[_ngcontent-c81]::-webkit-input-placeholder{color:#777}.ng2-tag-input.bootstrap3-info[_ngcontent-c81]   input[_ngcontent-c81]:focus{border:none;-webkit-box-shadow:none;box-shadow:none}.bootstrap3-info.ng2-tag-input.ng2-tag-input--focused[_ngcontent-c81]{-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.4);box-shadow:inset 0 1px 1px rgba(0,0,0,.4);border:1px solid #ccc}.bootstrap3-info.ng2-tag-input.ng2-tag-input--invalid[_ngcontent-c81]{-webkit-box-shadow:inset 0 1px 1px #d9534f;box-shadow:inset 0 1px 1px #d9534f}.ng2-tag-input[_ngcontent-c81]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;-webkit-transition:all .25s;transition:all .25s;padding:.25rem 0;min-height:32px;cursor:text;border-bottom:2px solid #efefef}.ng2-tag-input[_ngcontent-c81]:focus{outline:0}.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c81]{opacity:.7}.ng2-tag-input.ng2-tag-input--focused[_ngcontent-c81]{border-bottom:2px solid #2196f3}.ng2-tag-input.ng2-tag-input--invalid[_ngcontent-c81]{border-bottom:2px solid #f44336}.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c81]{border:none}.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c81]{opacity:.5;cursor:not-allowed}.ng2-tag-input[_ngcontent-c81]   form[_ngcontent-c81]{margin:.1em 0}.ng2-tag-input[_ngcontent-c81]   .ng2-tags-container[_ngcontent-c81]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.minimal.ng2-tag-input[_ngcontent-c81]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;cursor:text;border-bottom:1px solid transparent}.minimal.ng2-tag-input[_ngcontent-c81]:focus{outline:0}.minimal.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c81]{opacity:.7}.minimal.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c81]{border:none}.minimal.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c81]{opacity:.5;cursor:not-allowed}.minimal.ng2-tag-input[_ngcontent-c81]   .ng2-tags-container[_ngcontent-c81]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.dark.ng2-tag-input[_ngcontent-c81]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;cursor:text;border-bottom:2px solid #444}.dark.ng2-tag-input[_ngcontent-c81]:focus{outline:0}.dark.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c81]{opacity:.7}.dark.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c81]{border:none}.dark.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c81]{opacity:.5;cursor:not-allowed}.dark.ng2-tag-input[_ngcontent-c81]   .ng2-tags-container[_ngcontent-c81]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.bootstrap.ng2-tag-input[_ngcontent-c81]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;cursor:text;border-bottom:2px solid #efefef}.bootstrap.ng2-tag-input[_ngcontent-c81]:focus{outline:0}.bootstrap.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c81]{opacity:.7}.bootstrap.ng2-tag-input.ng2-tag-input--focused[_ngcontent-c81]{border-bottom:2px solid #0275d8}.bootstrap.ng2-tag-input.ng2-tag-input--invalid[_ngcontent-c81]{border-bottom:2px solid #d9534f}.bootstrap.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c81]{border:none}.bootstrap.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c81]{opacity:.5;cursor:not-allowed}.bootstrap.ng2-tag-input[_ngcontent-c81]   .ng2-tags-container[_ngcontent-c81]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.bootstrap3-info.ng2-tag-input[_ngcontent-c81]{display:block;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;padding:4px;cursor:text;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);border-radius:4px}.bootstrap3-info.ng2-tag-input[_ngcontent-c81]:focus{outline:0}.bootstrap3-info.ng2-tag-input.ng2-tag-input--dropping[_ngcontent-c81]{opacity:.7}.bootstrap3-info.ng2-tag-input.ng2-tag-input--invalid[_ngcontent-c81]{border-bottom:1px solid #d9534f}.bootstrap3-info.ng2-tag-input.ng2-tag-input--loading[_ngcontent-c81]{border:none}.bootstrap3-info.ng2-tag-input.ng2-tag-input--disabled[_ngcontent-c81]{opacity:.5;cursor:not-allowed}.bootstrap3-info.ng2-tag-input[_ngcontent-c81]   form[_ngcontent-c81]{margin:.1em 0}.bootstrap3-info.ng2-tag-input[_ngcontent-c81]   .ng2-tags-container[_ngcontent-c81]{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex}.error-message[_ngcontent-c81]{font-size:.8em;color:#f44336;margin:.5em 0 0}.bootstrap[_ngcontent-c81]   .error-message[_ngcontent-c81]{color:#d9534f}.ng2-tag-input__text-input[_ngcontent-c81]{display:inline;vertical-align:middle;border:none;padding:0 .5rem;height:38px;font-size:1em;font-family:Roboto,"Helvetica Neue",sans-serif}.ng2-tag-input__text-input[_ngcontent-c81]:focus{outline:0}.ng2-tag-input__text-input[disabled=true][_ngcontent-c81]{opacity:.5;background:#fff}</style><style>#car-config-validator[_ngcontent-c71]   #simulation-progress[_ngcontent-c71]{display:flex}#car-config-validator[_ngcontent-c71]   #simulation-progress[_ngcontent-c71]   #progress-spinner[_ngcontent-c71]{display:inline-block}#car-config-validator[_ngcontent-c71]   #simulation-progress[_ngcontent-c71]   #progress-spinner[_ngcontent-c71]   .loader-container[_ngcontent-c71]{font-size:.75rem}#car-config-validator[_ngcontent-c71]   #simulation-progress[_ngcontent-c71]   #progress-text[_ngcontent-c71]{display:inline-block;-ms-grid-row-align:center;align-self:center;font-size:1.1rem;margin-top:-.1rem;margin-left:.75rem}#car-config-validator[_ngcontent-c71]   #validation-viewer[_ngcontent-c71]{margin-bottom:.9375rem}#car-config-validator[_ngcontent-c71]   .pinned-results[_ngcontent-c71]{display:block;padding-top:.25rem}@media (min-width:576px){#car-config-validator[_ngcontent-c71]   .pinned-results[_ngcontent-c71]{float:right;display:inline-block}}#car-config-validator[_ngcontent-c71]   .pinned-results[_ngcontent-c71]   .pinned-results-left[_ngcontent-c71]{display:inline-block;padding:.2rem .75rem;margin:0;border:1px solid #ccc;border-top-left-radius:4px;border-bottom-left-radius:4px}#car-config-validator[_ngcontent-c71]   .pinned-results[_ngcontent-c71]   .pinned-results-left[_ngcontent-c71]   .fa[_ngcontent-c71]{margin-right:.5rem}#car-config-validator[_ngcontent-c71]   .pinned-results[_ngcontent-c71]   .pinned-results-right[_ngcontent-c71]{display:inline-block;padding:.2rem .75rem;margin:0;border:1px solid #ccc;border-left-width:0;border-top-right-radius:4px;border-bottom-right-radius:4px;cursor:pointer}</style><style type="text/css" data-gs-style-id="gridstack-style-34202"></style><style type="text/css" data-gs-style-id="gridstack-style-35392"></style><style>.tenant-simulation-quota-view[_ngcontent-c83]   .main-title[_ngcontent-c83]{margin-top:1rem}.tenant-simulation-quota-view[_ngcontent-c83]   .progress-column[_ngcontent-c83]{width:100px}.tenant-simulation-quota-view[_ngcontent-c83]   .progress-column[_ngcontent-c83]   .progress-container[_ngcontent-c83]{position:relative;padding:.2rem}.tenant-simulation-quota-view[_ngcontent-c83]   .progress-column[_ngcontent-c83]   .progress-container[_ngcontent-c83]   .progress[_ngcontent-c83]{width:100px}.tenant-simulation-quota-view[_ngcontent-c83]   .progress-column[_ngcontent-c83]   .progress-container[_ngcontent-c83]   .progress-hidden[_ngcontent-c83]{visibility:hidden}.tenant-simulation-quota-view[_ngcontent-c83]   .progress-column[_ngcontent-c83]   .progress-container[_ngcontent-c83]   .progress-count[_ngcontent-c83]{position:absolute;right:106px;top:0}</style><style type="text/css" data-gs-style-id="gridstack-style-6400"></style><style type="text/css" data-gs-style-id="gridstack-style-23788"></style><style type="text/css" data-gs-style-id="gridstack-style-37421"></style><style type="text/css" data-gs-style-id="gridstack-style-23309"></style><style type="text/css" data-gs-style-id="gridstack-style-90977"></style><style type="text/css" data-gs-style-id="gridstack-style-68830"></style><style type="text/css" data-gs-style-id="gridstack-style-51922"></style><style type="text/css" data-gs-style-id="gridstack-style-25951"></style><style type="text/css" data-gs-style-id="gridstack-style-20333"></style><style type="text/css" data-gs-style-id="gridstack-style-8046"></style><style type="text/css" data-gs-style-id="gridstack-style-58682"></style><style type="text/css" data-gs-style-id="gridstack-style-9247"></style><style type="text/css" data-gs-style-id="gridstack-style-97714"></style><style type="text/css" data-gs-style-id="gridstack-style-72717"></style><style type="text/css" data-gs-style-id="gridstack-style-60190"></style><style type="text/css" data-gs-style-id="gridstack-style-68524"></style><style type="text/css" data-gs-style-id="gridstack-style-74808"></style><style type="text/css" data-gs-style-id="gridstack-style-27509"></style><style>.config-type-name[_ngcontent-c66]{vertical-align:middle}</style><style>td[_ngcontent-c54]{vertical-align:middle}</style><style>.nav-tabs[_ngcontent-c38]{margin-bottom:1rem}</style><style>.comparing[_ngcontent-c85]{padding:0 1rem}</style><style>.rendered-markdown img{max-width:80%;display:block;margin:2rem auto;border:0 solid gray}.rendered-markdown pre{border:1px solid #d3d3d3;border-radius:3px;padding:4px 8px;font-family:Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.8rem;background:#f5f5f5}.rendered-markdown code{font-size:.8rem}.rendered-markdown h1,.rendered-markdown h2{margin-top:2rem;font-weight:700}</style></head>
+<body class="" style="cursor: auto;">
+
+  <cs-app ng-version="6.1.9"><div class="application-container" cselementheightcacher="" cssetbodydialogstyle="" id="application-container" style="height: calc(100% - 0px);">
+
+  <header>
+    <cs-nav-bar _nghost-c0=""><div _ngcontent-c0="" class="canopy-nav">
+  <div _ngcontent-c0="" class="container-fluid">
+    <nav _ngcontent-c0="" class="navbar navbar-expand-sm navbar-light bg-faded">
+      <button _ngcontent-c0="" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span _ngcontent-c0="" class="navbar-toggler-icon"></span>
+      </button>
+      <div _ngcontent-c0="" class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+        <div _ngcontent-c0="" class="navbar-nav">
+          <a _ngcontent-c0="" class="navbar-brand" id="nav-logo-link" href="https://portal.canopysimulations.com/">
+            <cs-logo _ngcontent-c0="" _nghost-c23=""><div _ngcontent-c23="" class="logo">
+  <div _ngcontent-c23="" class="logo-icon"></div>
+  <div _ngcontent-c23="" class="logo-text">Canopy Simulations</div>
+</div>
+</cs-logo>
+          </a>
+        </div>
+        <!---->
+        <!----><ul _ngcontent-c0="" class="navbar-nav navbar-right ml-auto">
+          <!---->
+          <!---->
+          <li _ngcontent-c0="" class="nav-item" title="Documentation">
+            <a _ngcontent-c0="" class="nav-link" id="nav-wiki-link" href="https://portal.canopysimulations.com/wiki"><i _ngcontent-c0="" class="fa fa-book"></i></a>
+          </li>
+          <li _ngcontent-c0="" class="nav-item" title="Worksheets">
+            <a _ngcontent-c0="" class="nav-link" id="nav-worksheets-link" href="https://portal.canopysimulations.com/worksheets"><i _ngcontent-c0="" class="fa fa-th"></i></a>
+          </li>
+          <li _ngcontent-c0="" class="nav-item" title="Home">
+            <a _ngcontent-c0="" class="nav-link" id="nav-home-link" href="https://portal.canopysimulations.com/"><i _ngcontent-c0="" class="fa fa-home"></i>Home</a>
+          </li>
+          <!----><li _ngcontent-c0="" class="nav-item">
+            <a _ngcontent-c0="" class="nav-link" id="nav-account-link" href="https://portal.canopysimulations.com/account-settings"><i _ngcontent-c0="" class="fa fa-user"></i>matteo.paganini</a>
+          </li>
+          <!----><li _ngcontent-c0="" class="nav-item">
+            <a _ngcontent-c0="" class="nav-link" id="nav-tenant-link" href="https://portal.canopysimulations.com/tenants"><i _ngcontent-c0="" class="fa fa-users"></i>podium</a>
+          </li>
+          <li _ngcontent-c0="" class="nav-item">
+            <a _ngcontent-c0="" class="nav-link" id="nav-sign-out-link" href="https://portal.canopysimulations.com/sign-out"><i _ngcontent-c0="" class="fa fa-sign-out"></i>Sign Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <cs-error-message _ngcontent-c0=""><!---->
+</cs-error-message>
+</div>
+</cs-nav-bar>
+  </header>
+
+  <cs-update-checker _nghost-c1=""><div _ngcontent-c1="" id="update-checker">
+  <!---->
+  <cs-error-message _ngcontent-c1="" class="update-error-message"><!---->
+</cs-error-message>
+</div>
+</cs-update-checker>
+  <cs-sim-version-status _nghost-c2=""><!----><div _ngcontent-c2="" class="container-fluid" id="sim-version-status">
+  <cs-error-message _ngcontent-c2=""><!---->
+</cs-error-message>
+  <div _ngcontent-c2="" class="right-container">
+    <div _ngcontent-c2="" class="version-item">
+      <div _ngcontent-c2="" class="version-item-left">
+        User Sim Version
+      </div><div _ngcontent-c2="" class="version-item-right">
+        From Tenant
+      </div>
+    </div>
+    <div _ngcontent-c2="" class="version-item active-version">
+      <div _ngcontent-c2="" class="version-item-left">
+        Tenant Sim Version
+      </div><div _ngcontent-c2="" class="version-item-right">
+        <!---->
+        <span _ngcontent-c2="" style="visibility: visible;">
+          1.5120
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+</cs-sim-version-status>
+  <cs-study-staging-area _nghost-c3=""><!---->
+<div _ngcontent-c3="" id="study-staging-area" class="area-visible">
+  <!----><div _ngcontent-c3="" class="study-container-top-line">
+    <form _ngcontent-c3="" novalidate="" class="ng-dirty ng-touched ng-valid">
+      <div _ngcontent-c3="" class="container-fluid study-container-top">
+        <div _ngcontent-c3="" class="row header-row">
+          <div _ngcontent-c3="" class="col-12">
+            <h1 _ngcontent-c3=""><a _ngcontent-c3="" href="https://portal.canopysimulations.com/studies">Study</a></h1>
+
+            <!---->
+            <!----><select _ngcontent-c3="" class="form-control study-type-select ng-valid ng-dirty ng-touched" formcontrolname="studyType" id="study-type-input" name="select">
+              <!----><option _ngcontent-c3="" value="straightSim" class="ng-star-inserted">Straight Sim</option><option _ngcontent-c3="" value="apexSim" class="ng-star-inserted">Apex Sim</option><option _ngcontent-c3="" value="quasiStaticLap" class="ng-star-inserted">Quasi-Static Lap</option><option _ngcontent-c3="" value="quasiStaticLapWithGenerateRacingLine" class="ng-star-inserted">Quasi-Static Lap (Generate Racing Line)</option><option _ngcontent-c3="" value="dynamicLap" class="ng-star-inserted">Dynamic Lap</option><option _ngcontent-c3="" value="dynamicLapWithSLS" class="ng-star-inserted">Dynamic Lap (SLS)</option><option _ngcontent-c3="" value="dynamicLapHD" class="ng-star-inserted">Dynamic Lap HD</option><option _ngcontent-c3="" value="generateRacingLine" class="ng-star-inserted">Generate Racing Line</option><option _ngcontent-c3="" value="virtual4Post" class="ng-star-inserted">Virtual 4 Post Rig</option><option _ngcontent-c3="" value="dragSim" class="ng-star-inserted">Drag Sim</option><option _ngcontent-c3="" value="thermalReplay" class="ng-star-inserted">Thermal Replay</option><option _ngcontent-c3="" value="tyreReplay" class="ng-star-inserted">Tyre Replay</option><option _ngcontent-c3="" value="channelInference" class="ng-star-inserted">Channel Inference</option><option _ngcontent-c3="" value="limitSim" class="ng-star-inserted">Limit Sim</option><option _ngcontent-c3="" value="subLimitSim" class="ng-star-inserted">Sub Limit Sim</option><option _ngcontent-c3="" value="telemetry" class="ng-star-inserted">Telemetry</option><option _ngcontent-c3="" value="postProcessUserMaths" class="ng-star-inserted">Post-Process User Maths</option>
+            </select>
+
+            <div _ngcontent-c3="" class="study-name-area">
+              <input _ngcontent-c3="" class="form-control ng-dirty ng-valid ng-touched" formcontrolname="name" id="study-name-input" placeholder="Study Name" type="text">
+            </div>
+
+            <div _ngcontent-c3="" class="button-area">
+              <button _ngcontent-c3="" class="btn btn-smart btn-secondary" id="commit-study-submit" type="submit">
+                <i _ngcontent-c3="" class="fa fa-cloud-upload"></i>Commit
+              </button>
+              <button _ngcontent-c3="" class="btn btn-smart btn-secondary" id="clear-study-staging-area-button" type="button">
+                <i _ngcontent-c3="" class="fa fa-close"></i>Clear
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div _ngcontent-c3="" class="study-container-bottom">
+        <div _ngcontent-c3="" class="study-container-bottom-inner">
+          <div _ngcontent-c3="" class="study-inputs">
+            <!----><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-car-link" href="https://portal.canopysimulations.com/configs/cars">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-car config-type-icon"></i>
+                    Car
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!----><a _ngcontent-c3="" class="staged-input-link" id="staged-car-link" href="https://portal.canopysimulations.com/staged/car/edit">SCG_LMH_LeMans_RaceConfig_50kgFuel_Correlation_0degFWFlap</a>
+                    <!---->
+                    <!---->
+                </div><!---->
+                <!----><div _ngcontent-c3="" class="button-menu-hovering-area full-width-buttons">
+                  <a _ngcontent-c3="" class="btn btn-secondary btn-smart" id="staged-car-edit-link" href="https://portal.canopysimulations.com/staged/car/edit">Edit Snapshot</a>
+                  <!---->
+                  <button _ngcontent-c3="" class="btn btn-secondary btn-smart" type="button" id="staged-car-edit-source-link">
+                    Edit Source Config
+                  </button>
+                  <button _ngcontent-c3="" class="btn btn-secondary btn-smart" type="button" id="staged-car-compare-to-source-link">
+                    Compare to Source Config
+                  </button>
+                  <cs-compare-to-something-button _ngcontent-c3="" class="add-margin" _nghost-c25=""><button _ngcontent-c25="" class="btn btn-smart btn-secondary clone-config-launcher" type="button">
+  <i _ngcontent-c25="" aria-hidden="true" class="fa fa-files-o"></i>
+  <!----><span _ngcontent-c25="">Compare to…</span>
+</button>
+</cs-compare-to-something-button>
+                </div>
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-weather-link" href="https://portal.canopysimulations.com/configs/weather">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-sun-o config-type-icon"></i>
+                    Weather
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!----><a _ngcontent-c3="" class="staged-input-link" id="staged-weather-link" href="https://portal.canopysimulations.com/staged/weather/edit">25 deg, dry</a>
+                    <!---->
+                    <!---->
+                </div><!---->
+                <!----><div _ngcontent-c3="" class="button-menu-hovering-area full-width-buttons">
+                  <a _ngcontent-c3="" class="btn btn-secondary btn-smart" id="staged-weather-edit-link" href="https://portal.canopysimulations.com/staged/weather/edit">Edit Snapshot</a>
+                  <!---->
+                  <button _ngcontent-c3="" class="btn btn-secondary btn-smart" type="button" id="staged-weather-edit-source-link" disabled="">
+                    Edit Source Config
+                  </button>
+                  <button _ngcontent-c3="" class="btn btn-secondary btn-smart" type="button" id="staged-weather-compare-to-source-link">
+                    Compare to Source Config
+                  </button>
+                  <cs-compare-to-something-button _ngcontent-c3="" class="add-margin" _nghost-c25=""><button _ngcontent-c25="" class="btn btn-smart btn-secondary clone-config-launcher" type="button">
+  <i _ngcontent-c25="" aria-hidden="true" class="fa fa-files-o"></i>
+  <!----><span _ngcontent-c25="">Compare to…</span>
+</button>
+</cs-compare-to-something-button>
+                </div>
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-track-link" href="https://portal.canopysimulations.com/configs/tracks">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-flag-checkered config-type-icon"></i>
+                    Track
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!----><a _ngcontent-c3="" class="staged-input-link" id="staged-track-link" href="https://portal.canopysimulations.com/staged/track/edit">RacingLine_Le Mans_MinGearMap_CornersONLY</a>
+                    <!---->
+                    <!---->
+                </div><!---->
+                <!----><div _ngcontent-c3="" class="button-menu-hovering-area full-width-buttons">
+                  <a _ngcontent-c3="" class="btn btn-secondary btn-smart" id="staged-track-edit-link" href="https://portal.canopysimulations.com/staged/track/edit">Edit Snapshot</a>
+                  <!---->
+                  <button _ngcontent-c3="" class="btn btn-secondary btn-smart" type="button" id="staged-track-edit-source-link">
+                    Edit Source Config
+                  </button>
+                  <button _ngcontent-c3="" class="btn btn-secondary btn-smart" type="button" id="staged-track-compare-to-source-link">
+                    Compare to Source Config
+                  </button>
+                  <cs-compare-to-something-button _ngcontent-c3="" class="add-margin" _nghost-c25=""><button _ngcontent-c25="" class="btn btn-smart btn-secondary clone-config-launcher" type="button">
+  <i _ngcontent-c25="" aria-hidden="true" class="fa fa-files-o"></i>
+  <!----><span _ngcontent-c25="">Compare to…</span>
+</button>
+</cs-compare-to-something-button>
+                </div>
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-driveCycle-link" href="https://portal.canopysimulations.com/configs/driveCycles">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-tachometer config-type-icon"></i>
+                    Drive Cycle
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-telemetry-link" href="https://portal.canopysimulations.com/configs/telemetry">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-wifi config-type-icon"></i>
+                    Telemetry
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-virtual4PostOptions-link" href="https://portal.canopysimulations.com/configs/virtual4PostOptions">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-gears config-type-icon"></i>
+                    Virtual 4 Post Rig Options
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-channelInferenceOptions-link" href="https://portal.canopysimulations.com/configs/channelInferenceOptions">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-gears config-type-icon"></i>
+                    Channel Inference Options
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-limitSimOptions-link" href="https://portal.canopysimulations.com/configs/limitSimOptions">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-gears config-type-icon"></i>
+                    Limit Sim Options
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-subLimitSimOptions-link" href="https://portal.canopysimulations.com/configs/subLimitSimOptions">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-gears config-type-icon"></i>
+                    Sub Limit Sim Options
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-bankedLimitSimOptions-link" href="https://portal.canopysimulations.com/configs/bankedLimitSimOptions">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-gears config-type-icon"></i>
+                    Banked Limit Sim Options
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-thermalReplayOptions-link" href="https://portal.canopysimulations.com/configs/thermalReplayOptions">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-gears config-type-icon"></i>
+                    Thermal Replay Options
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-pacejkaTyres-link" href="https://portal.canopysimulations.com/configs/pacejkaTyres">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-gears config-type-icon"></i>
+                    Pacejka Tyres
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input hidden-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-overtaking-link" href="https://portal.canopysimulations.com/configs/overtaking">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-random config-type-icon"></i>
+                    Overtaking
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-userMaths-link" href="https://portal.canopysimulations.com/configs/userMaths">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-code-fork  fa-rotate-90 config-type-icon"></i>
+                    User Maths
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-center">
+                    <!----><a _ngcontent-c3="" class="staged-input-link" id="staged-userMaths-link" href="https://portal.canopysimulations.com/staged/userMaths/edit">Math 001a</a>
+                    <!---->
+                    <!---->
+                </div><!----><div _ngcontent-c3="" class="study-input-right study-input-close">
+                  <i _ngcontent-c3="" class="fa fa-close"></i>
+                </div>
+                <!----><div _ngcontent-c3="" class="button-menu-hovering-area full-width-buttons">
+                  <a _ngcontent-c3="" class="btn btn-secondary btn-smart" id="staged-userMaths-edit-link" href="https://portal.canopysimulations.com/staged/userMaths/edit">Edit Snapshot</a>
+                  <!---->
+                  <button _ngcontent-c3="" class="btn btn-secondary btn-smart" type="button" id="staged-userMaths-edit-source-link" disabled="">
+                    Edit Source Config
+                  </button>
+                  <button _ngcontent-c3="" class="btn btn-secondary btn-smart" type="button" id="staged-userMaths-compare-to-source-link">
+                    Compare to Source Config
+                  </button>
+                  <cs-compare-to-something-button _ngcontent-c3="" class="add-margin" _nghost-c25=""><button _ngcontent-c25="" class="btn btn-smart btn-secondary clone-config-launcher" type="button">
+  <i _ngcontent-c25="" aria-hidden="true" class="fa fa-files-o"></i>
+  <!----><span _ngcontent-c25="">Compare to…</span>
+</button>
+</cs-compare-to-something-button>
+                </div>
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-constraints-link" href="https://portal.canopysimulations.com/configs/constraints">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-code-fork fa-rotate-270 config-type-icon"></i>
+                    Constraints
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div><div _ngcontent-c3="" class="study-input-container">
+              <div _ngcontent-c3="" class="study-input button-menu-hover-target optional-study-input">
+                <a _ngcontent-c3="" class="list-link" id="staged-view-all-exploration-link" href="https://portal.canopysimulations.com/configs/explorations">
+                  <div _ngcontent-c3="" class="study-input-left">
+                    <i _ngcontent-c3="" class="fa fa-sliders config-type-icon"></i>
+                    Exploration
+                  </div></a><div _ngcontent-c3="" class="study-input-content study-input-right">
+                    <!---->
+                    <!---->
+                    <!----><i _ngcontent-c3="">none</i>
+                </div><!---->
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-c3="" class="container-fluid study-container-bottom-messages">
+          <cs-error-message _ngcontent-c3="" class="error-message-component"><!---->
+</cs-error-message>
+          <!---->
+          <div _ngcontent-c3="" class="alert alert-info committed-study show-committed-study">
+            <!----><div _ngcontent-c3="" id="study-committed-area" class="ng-star-inserted">
+              <div _ngcontent-c3="" class="item">
+                <strong _ngcontent-c3="">LeMans_Telemetry_Baseline_Comparison</strong> committed
+              </div>
+              <div _ngcontent-c3="" class="item">
+                <a _ngcontent-c3="" id="study-committed-view-study" href="https://portal.canopysimulations.com/studies/06565e4be06beb118fed0003ff1b97ae/4e3322828bc64e788c75dc46abdcc340">
+                  View Study
+                </a>
+              </div>
+              <div _ngcontent-c3="" class="item">
+                <a _ngcontent-c3="" id="study-committed-view-studies" href="https://portal.canopysimulations.com/studies">
+                  View All Studies
+                </a>
+              </div>
+              <div _ngcontent-c3="" class="item" id="study-committed-dismiss">
+                <a _ngcontent-c3="" href="javascript:void(0)">
+                  Dismiss
+                </a>
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</cs-study-staging-area>
+  <cs-results-staging-area _nghost-c4=""><div _ngcontent-c4="" id="results-staging-area">
+  <!---->
+  <cs-error-message _ngcontent-c4=""><!---->
+</cs-error-message>
+</div>
+
+</cs-results-staging-area>
+
+  <main class="main-content">
+    <router-outlet></router-outlet><ng-component _nghost-c91="" class="ng-star-inserted"><div _ngcontent-c91="" id="wiki-page">
+  <div _ngcontent-c91="" class="container-fluid">
+    <!----><p _ngcontent-c91="" class="ng-star-inserted">
+      <button _ngcontent-c91="" class="btn btn-secondary" id="wiki-back-button"><i _ngcontent-c91="" class="fa fa-caret-left"></i>Back</button>
+      <a _ngcontent-c91="" class="btn btn-secondary" id="wiki-contents-button" href="https://portal.canopysimulations.com/wiki"><i _ngcontent-c91="" class="fa fa-book"></i>Contents</a>
+    </p>
+    <cs-error-message _ngcontent-c91=""><!---->
+</cs-error-message>
+    <!---->
+    <!----><h1 _ngcontent-c91="" id="wiki-title-Suspension" class="ng-star-inserted">Suspension</h1>
+    <cs-markdown _ngcontent-c91=""><cs-error-message><!---->
+</cs-error-message>
+<div class="rendered-markdown"><p>The suspension comprises two parts:</p>
+<ol>
+<li><strong>External Suspension:</strong> A set of six suspension members connecting the hub to the chassis body. The movement of the external suspension is governed by the position of the <em>rocker</em>, which is connected to the hub by the <em>pushrod</em>.</li>
+<li><strong>Internal Suspension:</strong> The <em>rocker</em> is a <em>bellcrank</em> (connected to the external suspension via the <em>pushrod</em>) which changes the length of a set of internal suspension components as it rotates. This displacement generates restoring forces enabling the car to support its weight and other loads.</li>
+</ol>
+<p>A key feature of both the internal and external suspension is that the relationships between hub movement, rocker angle and internal suspension displacements are all non-linear. Capturing this non-linearity is critically important to simulation realism. Canopy Simulations perform a rapid, high-fidelity analysis of both internal and external suspension, before abstracting the non-linear behaviour to a compact mathematical representation which captures the suspension behaviour to a high degree of accuracy.</p>
+<p><a name="fig-crude-suspension-topology"></a>
+<img src="./Canopy Simulations_files/crude-suspension-topology.png" alt="Crude sketch of the relationship between the hub, external suspension, rocker, chassis and internal suspension."></p>
+<p>It is worth noting that while the Canopy model splits the suspension into the internal and external suspension, this does not present barriers for simulating cars which attach the force generating components directly to the external suspension (typically the hub). If your suspension falls into this category then please contact us to discuss your requirements.</p>
+<h2 id="the-design-position">The Design Position</h2>
+<p>Because the suspension moves relative to the chassis, some arbitrary position of the hub relative to the chassis must be chosen in which to write down the positions of all of the suspension members. This position is referred to as the <em>design position</em>. There is nothing special about this position in terms of car dynamics, it is not necessarily the position in which the suspension supports the weight of the car, nor the position at which the suspension rests when freely hanging. In order to achieve the ride-heights specified in <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>a</mi><mi>r</mi><mo>→</mo><mi>C</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>s</mi><mi>i</mi><mi>s</mi><mo>→</mo><mi>h</mi><mi>R</mi><mi>i</mi><mi>d</mi><mi>e</mi><mi>F</mi><mi mathvariant="normal">/</mi><mi>R</mi><mi>S</mi><mi>e</mi><mi>t</mi><mi>u</mi><mi>p</mi></mrow><annotation encoding="application/x-tex"> Car \rightarrow Chassis\rightarrow hRideF/RSetup </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.75em;"></span><span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right: 0.07153em;">C</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="mrel">→</span><span class="mord mathit" style="margin-right: 0.07153em;">C</span><span class="mord mathit">h</span><span class="mord mathit">a</span><span class="mord mathit">s</span><span class="mord mathit">s</span><span class="mord mathit">i</span><span class="mord mathit">s</span><span class="mrel">→</span><span class="mord mathit">h</span><span class="mord mathit" style="margin-right: 0.00773em;">R</span><span class="mord mathit">i</span><span class="mord mathit">d</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right: 0.13889em;">F</span><span class="mord mathrm">/</span><span class="mord mathit" style="margin-right: 0.00773em;">R</span><span class="mord mathit" style="margin-right: 0.05764em;">S</span><span class="mord mathit">e</span><span class="mord mathit">t</span><span class="mord mathit">u</span><span class="mord mathit">p</span></span></span></span></span>, the setup code will adjust the length of the pushrod, or the springs (according to the user's choice) such that the suspension supports the weight of the car at the specified ride height. The rocker angles and values of x-bump etc. are measured relative to the design position. In other words, the design position is the position at which <span><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>R</mi><mi>o</mi><mi>c</mi><mi>k</mi><mi>e</mi><mi>r</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex"> aRocker = 0 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.69444em;"></span><span class="strut bottom" style="height: 0.69444em; vertical-align: 0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right: 0.00773em;">R</span><span class="mord mathit">o</span><span class="mord mathit">c</span><span class="mord mathit" style="margin-right: 0.03148em;">k</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span></span>.</p>
+<h2 id="external-suspension">External Suspension</h2>
+<h3 id="geometry">Geometry</h3>
+<p>When referring to the external suspension, we are really referring to how the hub moves relative to the chassis; this is constrained by the six suspensions members (upper and lower wishbone forward and rearward arms, toelink, and pushrod). These may be modified in the following locations:</p>
+<p><em>Suspension</em> -&gt; <em>Front/Rear</em> -&gt; <em>External</em> -&gt; <em>pickUpPts</em></p>
+<p>The set of pickup points listed in the table below may be edited, all of which refer to a <em>right hand side</em> wheel. This set of pickup points defines the position of the suspension in the <em>design position</em>.</p>
+<p>Various configurations are available for suspension pickup points:</p>
+<ul>
+<li>Double wishbone with pushrod on upright or wishbone.</li>
+</ul>
+<p>Wishbones, pushrod, and trackrod are defined, and Canopy computes the kinematics. rRockerC is in the usual place, connecting the external and internal suspension.</p>
+<ul>
+<li>Double wishbone with coilover on any wishbone leg.</li>
+</ul>
+<p>When running a coilover on a wishbone leg, it no longer makes sense to talk about external and internal suspension. In this configuration aRocker (in radians) becomes the coilover displacement (in meters). By doing this the internal suspension moves with the coilover, in effect breaking down the distinction between external and internal suspension by making them move with the same kinematics.</p>
+<ul>
+<li>MacPherson strut.</li>
+</ul>
+<p>This option must be selected under both external and internal suspension; this gets rid of the internal pick-up-points which aren't required. Instead of rocker limits we define displacement limits xMacPhersonStrutMin and Max. The anti-roll bar can be connected to the damper strut or wishbone forwards/rearwards leg using the arbConnection option.</p>
+<ul>
+<li>Abstract set of mechanical advantages. These can be defined in place of actual pick-up-points.</li>
+</ul>
+<p>In this final configuration, the hub movement in all 6 degrees of freedom is defined as a quadratic in terms of aRocker and xRack, and the hub is no longer physically connected to the rocker. The internal suspension doesn't have to match up with the external suspension, and the two are only related by the rocker angle. rRockerC is now used to define only the internal suspension kinematics and can be placed anywhere, although it might help to visualise the suspension if this corresponds to a position on the actual car. For pushrod suspension, rRockerC could be the normal position of the rocker pivot. With coilover we could manually set rRockerC as a wishbone leg pivot point (similar to "coilover on wishbone" option), allowing us to attach a spring and damper in the normal place.</p>
+<p>In the coilover case, if we wanted to match up the movement of the internal suspension with the externals we could set dzHub_daRocker = length of wishbone leg (m). This would work for small rocker angles, although if the rotations get larger we'll need to use additional degrees of freedom and second derivatives to describe the hub movement, because in this example the external suspension has moved only vertically, whereas the internal suspension moves in an arc about rRockerC.
+The minimum required degrees of freedom for this configuration are zHub Sensitivity to aRocker and aSteer Sensitivity to xRack, with a linear relationship. To represent more complex kinematics, you can click on "Properties" and open up other degrees of freedom and a quadratic relationship.</p>
+<p><a name="tab-externalpickups"></a></p>
+<table class="table">
+<thead>
+<tr>
+<th>PickUp Point</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rAxleC</td>
+<td>The axle centre point; at the centre of the wheel in all dimensions.</td>
+</tr>
+<tr>
+<td>rAxleAxis</td>
+<td>An arbitrary point on the axle axis <em>outboard of the axle centre.</em></td>
+</tr>
+<tr>
+<td>rFLWBI</td>
+<td>The front lower wishbone inboard point.</td>
+</tr>
+<tr>
+<td>rFLWBO</td>
+<td>The front lower wishbone outboard point.</td>
+</tr>
+<tr>
+<td>rRLWBI</td>
+<td>The rear lower wishbone inboard point.</td>
+</tr>
+<tr>
+<td>rRLWBO</td>
+<td>The rear lower wishbone outboard point.</td>
+</tr>
+<tr>
+<td>rFUWBI</td>
+<td>The front upper wishbone inboard point.</td>
+</tr>
+<tr>
+<td>rFUWBO</td>
+<td>The front upper wishbone outboard point.</td>
+</tr>
+<tr>
+<td>rRUWBI</td>
+<td>The rear upper wishbone inboard point.</td>
+</tr>
+<tr>
+<td>rRUWBO</td>
+<td>The rear upper wishbone outboard point.</td>
+</tr>
+<tr>
+<td>rTRI</td>
+<td>The track rod (or toe link) inboard point.</td>
+</tr>
+<tr>
+<td>rTRO</td>
+<td>The track rod (or toe link) outboard point.</td>
+</tr>
+<tr>
+<td>rPRI</td>
+<td>The pushrod inboard point (on the rocker).</td>
+</tr>
+<tr>
+<td>rPRO</td>
+<td>The pushrod outboard point (on the hub).</td>
+</tr>
+<tr>
+<td>rRockerC</td>
+<td>A point on the rocker axis, typically at the centre of the width of the rocker.</td>
+</tr>
+<tr>
+<td>rRockerAxis</td>
+<td>An arbitrary point on the rocker axis, not coincident with rRockerC (position relative to rRockerC is otherwise irrelevant).</td>
+</tr>
+</tbody>
+</table>
+<p>Note that the four wishbone members are defined completely independently, rather than as two triangular wishbones. While it is common for the outboard points of the upper or lower wishbones to be coincident this is not always the case, and the Canopy Vehicle Model's internal kinematics make no distinction between <em>split</em> and <em>non-split</em> geometries.</p>
+<p>Further parameters define the extent of rocker rotation and rack displacement and (optionally) the design radius of the wheels:</p>
+<p><a name="tab-rockerrackbounds"></a></p>
+<table class="table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aRockerMax</td>
+<td>Maximum rotation of the rocker.*</td>
+</tr>
+<tr>
+<td>aRockerMin</td>
+<td>Minimum rotation of the rocker.*</td>
+</tr>
+<tr>
+<td>xRackMax</td>
+<td>Maximum displacement of the steering rack.</td>
+</tr>
+<tr>
+<td>xRackMin</td>
+<td>Minimum displacement of the steering rack.</td>
+</tr>
+<tr>
+<td>rWheelDesign</td>
+<td>Radius of the wheel as it appears on the design drawings. Used to calculate suspension kinematics.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Some notes about rocker limits:</li>
+<li>The kinematics curves are calculated at a fixed number of points between aRockerMin &amp; Max, therefore higher resolution kinematics can be obtained by avoiding an unnecessarily large range.</li>
+<li>Prior to setup we drive the suspension components between aRockerMin &amp; Max to make sure the forces produced are sensible. If the rocker limits are too relaxed causing the suspension to be driven deep into very stiff bump or droop stops, you might run into problems because the force produced will be too high. Likewise relaxed limits might put your suspension into a position where it binds.</li>
+<li>During car setup there needs to be enough headroom within aRockerMin &amp; Max in order to shim the car, and run through the speed range.</li>
+<li>For Dynamic Lap, we use the rocker limits in the early iterations to keep the solution in a sensible operating window. They are not hard limits (for this use bump or droop stops), they are just guidance.</li>
+</ul>
+<p>In summary, the rocker limits should cover the range of motion you expect to use, plus a little bit of headroom.</p>
+<h3 id="parameters">Parameters</h3>
+<p>The coordinates of the pickup points must all be entered in the car coordinate system, as defined in <a href="javascript:void(0)" class=" wiki-relative-link-coordinates">coordinates</a>. In addition to the pickup points, the external geometry defines the stiffness and damping of the steering rack, flexure stiffnesses, setup camber and toe angles, and external compliances as listed in the table below.</p>
+<p><a name="tab-externalparameters"></a></p>
+<table class="table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aToeSetup</td>
+<td>The toe angle at setup (the angle between the hub x-axis and the car x-axis).</td>
+</tr>
+<tr>
+<td>aCamberSetup</td>
+<td>The camber angle at setup (the angle between the hub z-axis and the car z-axis).</td>
+</tr>
+<tr>
+<td>kRack</td>
+<td>Stiffness of the steering rack (front suspension only).</td>
+</tr>
+<tr>
+<td>cRackDamping</td>
+<td>Steering rack damping coefficient (front suspension only).</td>
+</tr>
+<tr>
+<td>xFlexureNeutral</td>
+<td>The position at which the flexure generates zero force.</td>
+</tr>
+<tr>
+<td>kFlexure</td>
+<td>Stiffness observed when moving the hub vertically relative to the chassis with no force in the pushrod.</td>
+</tr>
+<tr>
+<td>daCamber_d**Tyre</td>
+<td>Ratio between Fx, Fy, Fz or Mz applied at the contact patch, and change in wheel camber angle.</td>
+</tr>
+<tr>
+<td>daToe_d**Tyre</td>
+<td>Ratio between Fx, Fy, Fz or Mz applied at the contact patch, and change in wheel toe angle.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="internal-suspension">Internal Suspension</h2>
+<p>The internal suspension comprises two main classes of parameter:</p>
+<ol>
+<li>The pickup points of all the internal suspension components in the suspension design position.</li>
+<li>The physical properties of the suspension components themselves.</li>
+</ol>
+<h3 id="geometry">Geometry</h3>
+<p>The internal suspension pickup points comprises a complete list of pickup points for <em>all components that could ever be fitted</em>. Many of these are mutually exclusive (such as T-Type and U-Type anti-roll bar geometries), so users may choose any components from the list in the table below. The minimum requirement is that sufficient suspension components are present to support the weight of the car.</p>
+<p><a name="tab-internalpickups"></a></p>
+<table class="table">
+<thead>
+<tr>
+<th>PickUp Point</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rTorsionBarAnchor</td>
+<td>Point at which the torsion bars are either anchored to the chassis or to the cross-link mechanism.</td>
+</tr>
+<tr>
+<td>rCrossLink</td>
+<td>Connection point for the torsion bar cross link.</td>
+</tr>
+<tr>
+<td>rCornerSpring</td>
+<td>The position of the corner spring attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rCornerSpringChassis</td>
+<td>The point at which the corner spring is anchored to the chassis.</td>
+</tr>
+<tr>
+<td>rCornerBumpStop</td>
+<td>The position of the corner bump stop attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rCornerBumpStopChassis</td>
+<td>The point at which the corner bump stop is anchored to the chassis.</td>
+</tr>
+<tr>
+<td>rCornerDamper</td>
+<td>The position of the corner damper attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rCornerDamperChassis</td>
+<td>The point at which the corner damper is anchored to the chassis.</td>
+</tr>
+<tr>
+<td>rCornerDroopStop</td>
+<td>The position of the corner droop stop attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rCornerDroopStopChassis</td>
+<td>The point at which the corner droop stop is anchored to the chassis.</td>
+</tr>
+<tr>
+<td>rCornerInerter</td>
+<td>The position of the corner inerter attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rCornerInerterChassis</td>
+<td>The point at which the corner inerter is anchored to the chassis.</td>
+</tr>
+<tr>
+<td>rTriSpring</td>
+<td>The position of the tri spring attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rTriBumpStop</td>
+<td>The position of the tri bump stop attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rTriDamper</td>
+<td>The position of the tri damper attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rTriInerter</td>
+<td>The position of the tri inerter attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rARBRockerPickup</td>
+<td>The position of anti-roll bar droplink attachment to the rocker.</td>
+</tr>
+<tr>
+<td>rARBPickupInboard</td>
+<td>The position of anti-roll bar droplink attachment to the roll bar lever arm.</td>
+</tr>
+<tr>
+<td>rARBAxis</td>
+<td>One point on the axis of the anti-roll bar itself.</td>
+</tr>
+<tr>
+<td>rARBAnchor</td>
+<td>Attachment of the torsion element to the chassis (T-type ARB only).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="anti-roll-bar-topologies">Anti-Roll Bar Topologies</h4>
+<p>There are two principal types of ARB, U-type and T-type, these are shown in the diagrams below with their attendant pick-up-points marked. Please note that in the case of T-type <em>rARBAxis</em> must not be coincident with <em>rARBAnchor</em>.</p>
+<p>With U-type the torsional element is assumed to run transversly across the car, hence only one point is required to define the position of its torsionsal axis. Where the suspension type is direct coilover, the topology is identical except that the rocker is replaced with a point on whichever wishbone (upper or lower) the coilover is attached to.</p>
+<p><a name="fig-u-type-arb"></a>
+<img src="./Canopy Simulations_files/u-type-arb.png" alt="Crude sketch of U-type ARB topology."></p>
+<p>In the case of the T-type arrangement, the pivot of the bottom of the T is assumed to be transverse, and so the point <em>rARBAxis</em> defines the torsional axis of the bar. It is not necessarily the case that the torsional axis intersects the line between the two inboard pickups, i.e., the top of the T may not be straight.</p>
+<p><a name="fig-t-type-arb"></a>
+<img src="./Canopy Simulations_files/t-type-arb.png" alt="Crude sketch of T-type ARB topology."></p>
+<h4 id="abstract-internal-suspension">Abstract Internal Suspension</h4>
+<p>Instead of defining the geometry of the internals using pickup points, the kinematics of internal components can be entered directly using a quadratic that is a function of aRocker.</p>
+<h3 id="parameters-for-linear-components">Parameters for Linear Components</h3>
+<p>The parameters of the internal suspension components are generally straightforward, and are listed in the table below. Several options are available for torsion bars, namely; none, simple, cross-linked, and collapsible cross-linked. Whilst the pick-up points for the cross link are always present in the editor, they are not required unless fitting a cross-linked setup. If the cross-link is not specified as collapsible, it's assumed to be rigid (100MN/m).</p>
+<p><a name="tab-internalparameters"></a></p>
+<table class="table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kSpringL/R</td>
+<td>The linear stiffness of the corner spring.</td>
+</tr>
+<tr>
+<td>kTorsionBar</td>
+<td>The torsional stiffness of the corner torsion bar.</td>
+</tr>
+<tr>
+<td>MPreloadTorsionBar</td>
+<td>Preload torque on the torsion bar with suspension in design position.</td>
+</tr>
+<tr>
+<td>kCrossLink</td>
+<td>Stiffness of the spring in the collapsible cross-link (if selected).</td>
+</tr>
+<tr>
+<td>FCrossLinkPreload</td>
+<td>Preload in the collapsible cross-link (if selected).</td>
+</tr>
+<tr>
+<td>droopStop kSpringL/R</td>
+<td>The linear stiffness when the droop stop is active.</td>
+</tr>
+<tr>
+<td>droopStop FSpringPreload</td>
+<td>Preload in the droop stop at xDroopStop = 0.</td>
+</tr>
+<tr>
+<td>droopStop xSpringGap</td>
+<td>Alternative to preload; droop stop gap at xDroopStop = 0.</td>
+</tr>
+<tr>
+<td>kTriSpring</td>
+<td>The linear stiffness of the tri spring.</td>
+</tr>
+<tr>
+<td>kAntiRollBar</td>
+<td>The linear stiffness of anti-roll bar.</td>
+</tr>
+<tr>
+<td>IInerterL/R</td>
+<td>The inertance of the corner inerter.</td>
+</tr>
+<tr>
+<td>ITriInerter</td>
+<td>The inertance of the tri inerter.</td>
+</tr>
+</tbody>
+</table>
+<p>Installation compliances can be specified for the following:</p>
+<table class="table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>torsionBar</td>
+<td>Compliance which can be expressed in terms of aRocker.</td>
+</tr>
+<tr>
+<td>antiRollBar</td>
+<td>Compliance which can be expressed in terms of anti roll bar twist.</td>
+</tr>
+<tr>
+<td>spring</td>
+<td>Compliance which affects the apparent stiffness of the corner springs.</td>
+</tr>
+<tr>
+<td>triSpring</td>
+<td>Compliance which affects the apparent stiffness of the tri spring.</td>
+</tr>
+</tbody>
+</table>
+<p>Compliance is effectively added a spring in series.</p>
+<h3 id="parameters-for-non-linear-components">Parameters for Non-Linear Components</h3>
+<h4 id="bump-stops">Bump Stops</h4>
+<p>The bump stops, which have strongly non-linear behaviour, require special treatment. The equation which generates bump-stop force is as follows:
+<span><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>=</mo><msub><mi>p</mi><mrow><mtext><mi mathvariant="normal">l</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi></mtext></mrow></msub><mo>(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mrow><mtext><mi mathvariant="normal">g</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">p</mi></mtext></mrow></msub><mo>)</mo><mo>+</mo><msub><mi>p</mi><mrow><mtext><mi mathvariant="normal">e</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">S</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">g</mi></mtext></mrow></msub><msup><mi>e</mi><mrow><msub><mi>p</mi><mrow><mtext><mi mathvariant="normal">e</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi></mtext></mrow></msub><mo>(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mrow><mtext><mi mathvariant="normal">g</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">p</mi></mtext></mrow></msub><mo>)</mo></mrow></msup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex"> 
+F = p_{\text{linear}}(x - x_{\text{gap}}) + p_{\text{exponentialScaling}} e^{p_{\text{exponential}} (x - x_{\text{gap}})}.
+ </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height: 0.938em;"></span><span class="strut bottom" style="height: 1.22411em; vertical-align: -0.286108em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right: 0.13889em;">F</span><span class="mrel">=</span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist"><span class="" style="top: 0.15em; margin-right: 0.05em; margin-left: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord text scriptstyle cramped mtight"><span class="mord mathrm mtight">linear</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mbin">−</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span class="" style="top: 0.15em; margin-right: 0.05em; margin-left: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord text scriptstyle cramped mtight"><span class="mord mathrm mtight">gap</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist"><span class="" style="top: 0.15em; margin-right: 0.05em; margin-left: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord text scriptstyle cramped mtight"><span class="mord mathrm mtight">exponentialScaling</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist"><span class="" style="top: -0.413em; margin-right: 0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathit mtight">p</span><span class="msupsub"><span class="vlist"><span class="" style="top: 0.151229em; margin-right: 0.0714286em; margin-left: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord text scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">exponential</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span><span class="mopen mtight">(</span><span class="mord mathit mtight">x</span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathit mtight">x</span><span class="msupsub"><span class="vlist"><span class="" style="top: 0.143em; margin-right: 0.0714286em; margin-left: 0em;"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord text scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">gap</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span><span class="mclose mtight">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span class="" style="font-size: 0em;">​</span></span>​</span></span></span></span><span class="mord mathrm">.</span></span></span></span></span></span>
+A typical force displacement profile for this component is shown below.</p>
+<p><a name="fig-bumpstopexample"></a>
+<img src="./Canopy Simulations_files/bumpstopexample.png" alt="An example bump stop force-displacement characteristic."></p>
+<p>While this is somewhat imprecise our experience has shown that this functional form can capture most bump stop force-displacement profiles to acceptable accuracy. In order to use these bump stops the user should fill in the three parameters in the table below.</p>
+<p><a name="tab-bumpstopparameters"></a></p>
+<table class="table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pLinear</td>
+<td>The linear component of bump stop stiffness.</td>
+</tr>
+<tr>
+<td>pExponential</td>
+<td>The exponential component of bump stop stiffness.</td>
+</tr>
+<tr>
+<td>pExponentialScaling</td>
+<td>Scaling applied to the exponential component.</td>
+</tr>
+<tr>
+<td>xFreeGap</td>
+<td>The free gap between the bump stop and the bump stop plattens in the design position.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dampers">Dampers</h4>
+<p>As well as linear dampers, users can also define non-linear dampers, either through a custom look-up of force vs. speed, or through our parameterised non-linear dampers, which implements a smooth approximation to a piecewise linear curve given damping rates for high and low speed, in both bump and rebound. A resulting damper curve is shown below:</p>
+<p><a name="fig-damperexample"></a>
+<img src="./Canopy Simulations_files/damperexample.png" alt="An example parametric damper velocity-force characteristic."></p>
+<p>The transition between high and low speed damping occurs at <em>vDamperHighSpeedThresholdBump/Rebound</em> and at that point the marginal damping coefficient changes from <em>cBump/ReboundLowSpeed</em> to <em>cBump/ReboundHighSpeed</em>. The parameter values which produced the curve above are given in the table below, along with the parameters for damper lookups.</p>
+<p><a name="tab-damperparameters"></a></p>
+<table class="table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Definition</th>
+<th>Value in example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dampingCoefficient</td>
+<td>Linear damping coefficient when linear damper is selected.</td>
+<td></td>
+</tr>
+<tr>
+<td>vDamperBasis</td>
+<td>Speed values for damper lookup (+ve for bump).</td>
+<td></td>
+</tr>
+<tr>
+<td>FDamperLU</td>
+<td>Force values for damper lookup.</td>
+<td></td>
+</tr>
+<tr>
+<td>cBumpLowSpeed</td>
+<td>Low-speed damping coeff in bump direction.</td>
+<td>8000</td>
+</tr>
+<tr>
+<td>cBumpHighSpeed</td>
+<td>High-speed damping coeff in bump direction.</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>cReboundLowSpeed</td>
+<td>Low-speed damping coeff in rebound direction.</td>
+<td>4000</td>
+</tr>
+<tr>
+<td>cReboundHighSpeed</td>
+<td>High-speed damping coeff in rebound direction.</td>
+<td>2000</td>
+</tr>
+<tr>
+<td>vDamperHighSpeedThresholdBump</td>
+<td>Speed of transition from low to high speed damping rates in bump (always +ve).</td>
+<td>+0.1</td>
+</tr>
+<tr>
+<td>vDamperHighSpeedThresholdRebound</td>
+<td>Speed of transition from low to high speed damping rates in rebound (always -ve).</td>
+<td>-0.05</td>
+</tr>
+<tr>
+<td>rDamperScaling</td>
+<td>Global scaling on forces from all damper types (optional).</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="suspension-setup-code-and-sign-conventions">Suspension, Setup Code and Sign Conventions</h2>
+<p>When starting a simulation, the first thing that each Canopy Simulation executes is the <em>setup code</em>; a set of processes which convert user parameters (such as pickup points) into representations more suitable for rapid and repeatable computation. This also gives the opportunity to apply some sign conventions, which may be of help to the user in interpreting results. The conventions are as follows:</p>
+<ol>
+<li>Movement of the hub in the -ve z-direction (upwards in bump) <em>always</em> corresponds to a -ve change in rocker angle.</li>
+<li>A -ve change in rocker angle <em>always</em> corresponds to a -ve change in length of any internal suspension component in the simulation results.</li>
+<li>For convenience, when it comes to parameter input the sign is flipped to give +ve Force for +ve Bump Displacement, Velocity or Acceleration. This allows the stiffness of internal suspension components to be entered inline with common conventions.</li>
+</ol>
+<p>Applying these conventions can save great confusion in the future when switching between geometries which (for instance) invert the relationships between rocker angles and internal suspension component lengths.</p>
+<p>This section also provides an ideal point to introduce other suspension sign conventions:</p>
+<ol>
+<li>Wheel Toe angle is defined as +ve for toe which moves the front of the right hand tyre further outboard.</li>
+<li>Wheel camber angle is +ve for camber angles which move the top of the right hand tyre outboard.</li>
+</ol>
+<p><a name="fig-suspension-kinematics"></a>
+<img src="./Canopy Simulations_files/suspension-kinematics.png" alt="The suspension kinematic curves are shown as standard in the _Verify Car_ views. Front and rear internal and external kinematics are displayed, varying with \( aRocker \) and/or \( xRack \)."></p>
+<p>Suspension antis are computed in the kinematics plots. The points used for calculation are:</p>
+<ul>
+<li>Anti-squat: Wishbone intersect and rear hub centre.</li>
+<li>Anti-lift: Wishbone intersect and rear contact patch.</li>
+<li>Anti-rise: Wishbone intersect and front hub centre.</li>
+<li>Anti-dive: Wishbone intersect and front contact patch.</li>
+</ul>
+<p>The suspension antis are the height where the line from the hub or contact patch meets a vertical line through the CG as a percentage of the CG height.</p>
+<p><a name="fig-suspension-antis"></a>
+<img src="./Canopy Simulations_files/suspension-antis.png" alt="Calculation method used for suspension antis."></p>
+<h2 id="asymmetry">Asymmetry</h2>
+<p>For a symmetric car we define parameters for the right hand side of the car and by default this is mirrored for the left hand side. To introduce asymmetry for a specific component then find the parameter name ending in “L” to define the left hand side separate to the right.
+All accounts have access to basic asymmetric options: toe, camber, crossweight (defined under Chassis) and lateral weight distribution (defined under carRunningMass). It is possible to define everything in the suspension as asymmetric (pickup points, components etc), however this is hidden by default for simplicity. Contact us if you would like asymmetry for all suspension components to be turned on.</p>
+</div>
+</cs-markdown>
+  </div>
+</div>
+</ng-component>
+  </main>
+
+  <footer>
+    <cs-footer _nghost-c5=""><div _ngcontent-c5="" class="canopy-footer">
+  <div _ngcontent-c5="" class="container-fluid">
+    <hr _ngcontent-c5="">
+    <p _ngcontent-c5="">
+      <!---->
+      <!----><span _ngcontent-c5="" class="footer-item">
+        Tenant Sim Version <a _ngcontent-c5="" href="https://portal.canopysimulations.com/wiki/Release-Notes"><span _ngcontent-c5="" id="last-tenant-sim-version">1.5120</span></a>
+      </span>
+      <span _ngcontent-c5="" class="footer-item">Connected to <span _ngcontent-c5="" id="api-base-url">https://api.canopysimulations.com/</span></span>
+      <!---->
+      <cs-notification-enabler _ngcontent-c5="" class="footer-item" _nghost-c26=""><!----><span _ngcontent-c26="">
+  <a _ngcontent-c26="" href="javascript:void(0)">Enable Notifications</a>
+</span>
+<!---->
+</cs-notification-enabler>
+    </p>
+  </div>
+</div>
+</cs-footer>
+  </footer>
+</div>
+
+<cs-worksheet-dock _nghost-c6=""><!---->
+</cs-worksheet-dock>
+
+<cs-import-telemetry-dialog _nghost-c7=""><!---->
+</cs-import-telemetry-dialog>
+<cs-list-versions-dialog _nghost-c8=""><!---->
+</cs-list-versions-dialog>
+<cs-view-job-dialog _nghost-c9=""><!---->
+</cs-view-job-dialog>
+<cs-chart-editor-dialog _nghost-c10=""><!---->
+</cs-chart-editor-dialog>
+<cs-channel-editor-dialog _nghost-c11=""><!---->
+</cs-channel-editor-dialog>
+<cs-config-loader-dialog _nghost-c12=""><!---->
+</cs-config-loader-dialog>
+<cs-study-loader-dialog _nghost-c13=""><!---->
+</cs-study-loader-dialog>
+<cs-worksheet-labels-editor-dialog _nghost-c14=""><!---->
+</cs-worksheet-labels-editor-dialog>
+<cs-edit-document-metadata-dialog _nghost-c15=""><!---->
+</cs-edit-document-metadata-dialog>
+<cs-compare-config-dialog _nghost-c16=""><!---->
+</cs-compare-config-dialog>
+<cs-select-sim-version-dialog _nghost-c17=""><!---->
+</cs-select-sim-version-dialog>
+<cs-linting-engine-runner-dialog _nghost-c18=""><!---->
+</cs-linting-engine-runner-dialog>
+
+<cs-support-session-dialog _nghost-c19=""><!---->
+</cs-support-session-dialog>
+<cs-set-channel-units-dialog _nghost-c20=""><!---->
+</cs-set-channel-units-dialog>
+<cs-confirmation-dialog><!---->
+</cs-confirmation-dialog>
+<cs-prompt-dialog><!---->
+</cs-prompt-dialog>
+<cs-loading-dialog _nghost-c21=""><!---->
+</cs-loading-dialog>
+<cs-context-menu _nghost-c22=""><!---->
+
+</cs-context-menu>
+</cs-app>
+
+<script type="text/javascript" src="./Canopy Simulations_files/runtime.ec2944dd8b20ec099bf3.js.download"></script><script type="text/javascript" src="./Canopy Simulations_files/polyfills.c571c85683b04ebfe442.js.download"></script><script type="text/javascript" src="./Canopy Simulations_files/scripts.63ea3608a0a16438138f.js.download"></script><script type="text/javascript" src="./Canopy Simulations_files/vendor.c9d7e612f3e3f4bed6f9.js.download"></script><script type="text/javascript" src="./Canopy Simulations_files/main.0dfc87222766003c425e.js.download"></script>
+
+</body></html>

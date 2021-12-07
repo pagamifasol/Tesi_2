@@ -1,0 +1,19 @@
+- Dinamic Simulation: https://blog.canopysimulations.com/dynamic-simulation-61b0ee8e6cdf
+- Grip on tyre saving: https://blog.canopysimulations.com/get-a-grip-on-tyre-saving-a6a988e78562
+- Balance Through Corners: https://blog.canopysimulations.com/how-to-balance-an-f1-car-through-the-corner-11b68ac00da7
+- Aero Upgrades: https://blog.canopysimulations.com/aerodynamic-upgrades-facilitated-isochronal-ratio-cdcabbd4620e
+- Fuel Saving: https://blog.canopysimulations.com/fuel-saving-there-are-no-rules-d9b48fb55edb
+- Race Preparation Starting from zero: https://blog.canopysimulations.com/race-preparation-starting-from-zero-34596b1102bc
+- Transformative Power of speed: https://blog.canopysimulations.com/the-transformative-power-of-speed-4ff0d4d5297f
+- Matching Telemetry: https://blog.canopysimulations.com/getting-started-3-matching-telemetry-20d6b80c82b7
+- Car Architecture Evaluation: https://blog.canopysimulations.com/front-rear-or-all-wheel-drive-at-the-n%C3%BCrburgring-nordschleife-82125a803c14
+
+
+VIDEOS:
+
+- Setup for tyre saving: https://www.youtube.com/watch?v=BUHTnXNBc4A
+- Avoid Overtake while saving tyres: https://www.youtube.com/watch?v=5ik5Cz7ibPw
+- How to drive given a tyre saving constraints: https://www.youtube.com/watch?v=TW2tK8c_s4g
+- Redefining what is possible with simulation: https://www.youtube.com/watch?v=3B4nTehgcEw
+- Parallel Coordinates plot: https://www.youtube.com/watch?v=gwjqlzDSSQg
+- Introduction to future of motorsport simulation: https://www.youtube.com/watch?v=mwR-qGYfmlE

@@ -1,0 +1,48 @@
+import numpy as np
+import tkinter as tk
+from tkinter import filedialog
+
+root = tk.Tk()
+root.withdraw()
+
+crtFile = filedialog.askopenfilename(filetypes = (("VI-Grade MXP comma separated values","*.csv"),("All files","*.*")))
+wdFile = crtFile.replace('.csv','_wd.txt')
+
+wd_header = 'xtime [s] xdist [m] Speed [km/h] nmot [rpm] gear [] accx [g] accy [g] steer [deg] yaw [deg/s] \
+dam_fl [mm] dam_fr [mm] dam_rl [mm] dam_rr [mm] \
+rh_front [mm] rh_rear [mm]    \
+slip_lat_fl [deg] slip_lat_fr [deg] slip_lat_rl [deg] slip_lat_rr [deg] slip_lat_CG [deg] \
+slip_lon_fl [pct] slip_lon_fr [pct] slip_lon_rl [pct] slip_lon_rr [pct] \
+aero_balance [pct] \
+pbrake_f [bar] pbrake_r [bar] \
+Load_FL_Ch1 [kN] Load_FR_Ch1 [kN] Load_RL_Ch1 [kN] Load_RR_Ch1 [kN] \
+vhweel_fl [km/h] vhweel_fr [km/h] vhweel_rl [km/h] vhweel_rr [km/h] \
+acc_fl [g] acc_fr [g] acc_rl [g] acc_rr [g] \
+me_max [Nm] me_min [Nm] aps [%] ratio_drvtrn [r] B_tc [bool]'
+
+print('Loading file: ',crtFile)
+
+crt = np.loadtxt(crtFile,delimiter=',',skiprows=2)
+
+print('File loaded. Extracting columns...')
+
+wd = np.vstack((crt[:,0],crt[:,209],crt[:,103],crt[:,217],crt[:,713],crt[:,88],-crt[:,87],crt[:,195]*57.325,crt[:,107]*57.325,
+                crt[:,133]*1000,crt[:,135]*1000,crt[:,134]*1000,crt[:,136]*1000,
+                crt[:,12]*1000,crt[:,13]*1000,
+                crt[:,632]*57.325,crt[:,634]*57.325,crt[:,633]*57.325,crt[:,635]*57.325,crt[:,765]*57.325,
+                crt[:,648]*100,crt[:,650]*100,crt[:,649]*100,crt[:,651]*100,
+                crt[:,1]*100,
+                crt[:,33]*10,crt[:,34]*10,
+                crt[:,1012]/1000,crt[:,1013]/1000,crt[:,1014]/1000,crt[:,1015]/1000,
+                (crt[:,470]*crt[:,474])*3.6,(crt[:,702]*crt[:,704])*3.6,(crt[:,471]*crt[:,475])*3.6,(crt[:,703]*crt[:,705])*3.6,
+                crt[:,720]/9.81,crt[:,722]/9.81,crt[:,721]/9.81,crt[:,723]/9.81,
+                crt[:,218],crt[:,219],crt[:,197],crt[:,716],crt[:,222]))
+
+wd = wd.transpose()
+
+print('Done.')
+print('Exporting to: ',wdFile)
+
+np.savetxt(wdFile,wd,fmt='%.6f',header=wd_header,delimiter=' ',comments='')
+
+print('Completed.')

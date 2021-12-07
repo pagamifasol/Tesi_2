@@ -1,0 +1,102 @@
+function D=SystemModel
+%  Definition of Data
+
+%  Nodal Coordinates [mm]
+
+Coord=[ 2648        -310        289.077;    %1 UCA Front
+        3005.1      -198.629	279.725;    %2 UCA Rear
+        3070        -643.566	302.27;     %3 UCA Outer
+        2725        -198        151.706;    %4 LCA Front
+        3212.5      -132.88     124.346;    %5 LCA Rear
+        3084.939    -686.918	110.31;     %6 LCA Outer
+        3267.5      -136        238;        %7 Tierod Inner
+        3300        -609.378	249.632;    %8 Tierod Outer
+        3054.753	-161.722	359.461;	%9 Pushrod Upper
+        3094.938	-632.717	64.014;     %10 Pushrod Lower
+        3140        -805.532	-96;        %11 TCP
+        3140        -799.501	249.948;    %12 Wheel Center
+        
+        2993.506	-134.946	336.088;    %13 Rocker axis 1
+        3005.792	-181.715	412.312;    %14 Rocker axis 2
+        
+        3008.164	-68.54      428.719;    %15 Damper to rocker
+        2639.382	-156.125	434.42;     %16 Damper to bell-housing
+        
+%         2648        310        289.077;     %17 UCA Front
+%         3005.1      198.629	279.725;        %18 UCA Rear
+%         3070        643.566	302.27;         %19 UCA Outer
+%         2725        198        151.706;     %20 LCA Front
+%         3212.5      132.88     124.346;     %21 LCA Rear
+%         3084.939    686.918	110.31;         %22 LCA Outer
+%         3267.5      136        238;         %23 Tierod Inner
+%         3300        609.378	249.632;        %24 Tierod Outer
+%         3054.753	161.722	359.461;        %25 Pushrod Upper
+%         3094.938	632.717	64.014;         %26 Pushrod Lower
+%         3140        805.532	-96;            %27 TCP
+%         3140        799.501	249.948;        %28 Wheel Center    
+        ];
+
+%  Connectivity
+Con=[1 3;    %1 UCA front link
+     2 3;    %2 UCA rear link
+     4 6;    %3 LCA front link
+     5 6;    %4 LCA rear link
+     7 8;    %5 Tierod
+     9 10;    %6 Pushrod
+     3 11;    %7 UCA to TCP
+     6 11;    %8 LCA to TCP
+     8 11;    %9 Tierod to TCP
+     10 11;    %10 Pushrod to TCP
+     3 12;    %7 UCA to WC
+     6 12;    %8 LCA to WC
+     8 12;    %9 Tierod to WC
+     10 12;    %10 Pushrod to WC
+     % Connect all upright nodes between them
+     3 6;
+     3 10;
+     6 10;
+     3 8;
+     6 8;
+     8 10;
+     % Rocker body
+     %13 14; %rocker axis
+     9 13; %pushrod to axis 1
+     9 14; %pushrod to axis 2
+     9 15; %pushrod to damper
+     13 15; %damper to axis 1
+     14 15; %damper to axis 2
+     % Damper shaft
+     15 16;
+    ];
+
+% Definition of Degree of freedom (free=0 &  fixed=1); for 2-D trusses the last column is equal to 1
+Re=zeros(size(Coord)); %Default all free
+Re(1,:)=[1 1 1];
+Re(2,:)=[1 1 1];
+Re(4,:)=[1 1 1];
+Re(5,:)=[1 1 1];
+Re(7,:)=[1 1 1];
+%Re(9,:)=[1 1 1]; %pushrod upper
+
+Re(13,:)=[1 1 1]; %rocker axis 1
+Re(14,:)=[1 1 1]; %rocker axis 2
+Re(16,:)=[1 1 1]; %damper on bellhousing
+
+% or:   Re=[0 0 0;0 0 0;0 0 0;0 0 0;0 0 0;0 0 0;1 1 1;1 1 1;1 1 1;1 1 1];
+
+% Definition of Nodal loads 
+Load=zeros(size(Coord));
+Load(11,:) = [0 0 1000];
+% Load([1:3,6],:)=1e3*[1 -10 -10;0 -10 -10;0.5 0 0;0.6 0 0];
+% or:   Load=1e3*[1 -10 -10;0 -10 -10;0.5 0 0;0 0 0;0 0 0;0.6 0 0;0 0 0;0 0 0;0 0 0;0 0 0];
+
+% Definition of Modulus of Elasticity [MPa]
+E=ones(1,size(Con,1))*210e6; %Steel 210Gpa
+% or:   E=[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]*1e7;
+
+% Definition of Area [mm^2]
+% A=[.4 .1 .1 .1 .1 3.4 3.4 3.4 3.4 .4 .4 1.3 1.3 .9 .9 .9 .9 1 1 1 1 3.4 3.4 3.4 3.4];
+A = ones(1,size(Con,1))*1256; %40mm solid circle - 20x20x3.14 = 1256 mm^2
+
+% Convert to structure array
+D=struct('Coord',Coord','Con',Con','Re',Re','Load',Load','E',E','A',A');
